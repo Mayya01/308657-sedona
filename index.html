@@ -5,8 +5,9 @@
     <title> Седона</title>
   </head>
   <body>
+   <div class = 'container'>
     <header class = 'main-header'>
-      <div class = 'container'>
+
         <nav class = 'main-navigation'>
           <ul>
 
@@ -18,36 +19,39 @@
           </ul>
         </nav>
         <img src="http://placehold.it/150x100"> <!--Или это background-image?-->
-      </div>
     </header>
 
     <main>
-      <div class = 'container'>
         <h1>Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
         <h3>Рассмотрим 5 причин, по которым Седона круче,чем Гранд Каньон</h3>
 
-        <article class = 'advertising'>
+        <section class = 'advertising'>
           <div class = 'advertising-items'>
             <p>Настоящий городок</p>
             <p>-№1-</p>
-            <p>Седона - не аттракцион для туристов, <br>
-            тем течём своя жизнь</p>
+            <p>Седона - не аттракцион для туристов,тем течём своя жизнь</p>
           </div>
           <img src="http://placehold.it/150x100">
-        </article>
-
-        <section class = 'features'>
-          <img src="http://placehold.it/150x100" class = 'features-accomodation'>
-          <p>Рекомендуем пожить в настоящем мотеле,все как в кино!</p>
-
-          <img src="http://placehold.it/150x100" class = 'features-food'>
-          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-
-          <img src="http://placehold.it/150x100" class = 'features-presents'>
-          <p>Не только китайского, но и местного производства</p>
         </section>
 
-        <article class = 'advertising'>
+        <section class = 'features'>
+          <div class = 'features-details-accomodation' >
+          <img src="http://placehold.it/150x100" >
+          <p>Жильё</p>
+          <p>Рекомендуем пожить в настоящем мотеле,все как в кино!</p></div>
+
+          <div class = 'features-details-food'>
+          <img src="http://placehold.it/150x100">
+          <p>Еда</p>
+          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p></div>
+
+          <div class = 'features-details-presents'>
+          <img src="http://placehold.it/150x100">
+          <p>Сувениры</p>
+          <p>Не только китайского, но и местного производства</p></div>
+        </section>
+
+        <section class = 'advertising'>
 
           <img src="http://placehold.it/150x100">
 
@@ -75,24 +79,25 @@
             <p>Большинство едет в Гранд Каньон и толпится там</p>
           </div>
 
-        </article>
+        </section>
 
-        <article class = 'best-options'>
-          <div>
-            <h1>Заинтересовались?</h1>
+        <article class = 'best-offer'>
+
+          <div class = 'best-offer options '>
+            <h2>Заинтересовались?</h2>
             <p>Укажите Преполгаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+            <a href = '#'>Поиск гостиниц в Седоне</a>
           </div>
-          <form class = 'hotels' action="https://echo.htmlacademy.ru" method="get">
+          <form class = 'hotels' action= ' https://echo.htmlacademy.ru'  method = 'get' >
 
-            <p>Поиск гостиниц в Седоне</p>
             <label for = 'user-field-id -one' >Дата заезда:</label>
-            <input id = 'user-field-id-one' type='datetime' name='time-of-checkin' placeholder= '24 Апреля 2016' required>
+            <input id = 'user-field-id-one' type='text' name='time-of-checkin' placeholder= '24 Апреля 2016' required>
 
             <label for = 'user-field-id-two' >Дата Выезда:</label>
-            <input id = 'user-field-id -two' type='datetime' name='time-of-checkout' placeholder= '4 июля 2016' required>
+            <input id = 'user-field-id -two' type='text' name='time-of-checkout' placeholder= '4 июля 2016' required>
 
             <label for = 'for-adults'>Взрослые:</label>
-            <button id = 'for-adults' type = 'submit'>2</button>
+            <input id = 'for-adults' type = 'text'>2
 
             <label for = 'for-children'>Дети:</label>
             <button id = 'for-children' type = 'submit'>0</button>
@@ -102,10 +107,14 @@
           </form>
         </article>
 
-        <footer class = 'main-footer'>
-          <div class = 'container'>
+
+
+    </main>
+    <footer class = 'main-footer'>
+
+
           <section class = 'footer-hastag'>
-            <a href = '#'></a>
+          <a href = '#'>#VISITSEDONA</a>
           </section>
 
           <section class = 'footer-social'>
@@ -118,13 +127,10 @@
 
         <section class = 'footer-copyright'>
 
-          <a><img src="http://placehold.it/150x100" ></a>
+          <a>WEBSITE BY<img src="http://placehold.it/150x100" ></a>
 
         </section>
-
-        </div>
-        </footer>
-      </div>
-    </main>
+    </footer>
+    </div>
   </body>
 </html>
