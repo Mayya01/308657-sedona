@@ -1,0 +1,21 @@
+body{
+  font-family:'PT Sans', sans-serif;
+  font-size:14px;
+  line-height: 1.3em;
+}
+
+h1, h2{
+  font-family:'PT Sans', sans-serif;
+  font-size:21px;
+  font-weight:bold;
+  line-height: 1em;
+}
+
+h3{
+  font-family:'PT Sans', sans-serif;
+  font-size:14px;
+  font-weight:normal;
+  line-height:0.54em;
+}
+
+
