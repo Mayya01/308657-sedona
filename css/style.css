@@ -1,20 +1,236 @@
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+}
 body{
-  font-family: 'PT Sans Narrow', 'Arial', sans-serif;
+  font-family: 'PT Sans', 'Arial', sans-serif;
   font-size:14px;
   line-height: 1.3em;
   text-transform: uppercase;
 }
-
 h1, h2{
   font-size:21px;
   font-weight:bold;
   line-height: 1em;
 }
-
 h3{
   font-size:14px;
   font-weight:normal;
   line-height:0.54em;
 }
+.container{
+  width:1200px;
+  margin:0 auto;
+}
+.main-navigation li{
+  display:inline-block;
+}
+.main-navigation a{
+  display:block;
+}
+main .logo-image {
+  width:456px;
+  height: 343px;
+}
+.main-description{
+  background-color: aliceblue;
+  width: 1200px;
+  min-height: 210px;
+}
+.main-description h1{
+  text-align: center;
+  white-space: pre-wrap;
+  padding:60px 282px 34px 282px;
+}
+.main-description h3{
+  text-align: center;
+}
+.advertising-items-first:nth-child(1),.advertising-items-first:nth-child(2){
+  min-height: 257px;
+}
+ .advertising-items-first:nth-child(1){
+  background-color:azure;
+  float:left;
+  width:400px;
+}
+ .advertising-items-first:nth-child(2){
+  background-color: antiquewhite;
+  float: right;
+  width:800px;
+}
+.advertising-items-second:nth-child(1),
+.advertising-items-second:nth-child(2){
+  min-height: 257px;
+}
+.advertising-items-second:nth-child(1){
+  float:left;
+  width:800px;
+  background-color: antiquewhite;
+}
+.advertising-items-second:nth-child(2){
+  float:right;
+  width:400px;
+  background-color: azure;
+}
+.advertising-items-second p{
+  text-align: center;
+  white-space: pre-wrap;
+}
+.advertising-items-second p:nth-child(1){
+  padding-top:47px;
+  padding-bottom:23px;
+}
+.advertising-items-second p:nth-child(2){
+  padding-bottom: 25px;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.advertising-items-first p:first-child{
+  white-space:pre-wrap;
+  text-align: center;
+}
+.advertising-items-first p{
+  text-align:center;
+}
+.features-details-accomodation,
+.features-details-food,
+.features-details-presents{
+  padding-top: 60px;
+  min-height: 331px;
+  width:304px;
+  text-align: center;
+}
+.features-details-accomodation{
+  background-color: beige;
+  float:left;
+  margin-left: 47px;
+  margin-right: 92px;
+}
+.features-details-food{
+  background-color: coral;
+  float:left;
+  margin-right: 96px;
+}
+.features-details-presents{
+  background-color: cornsilk;
+  float:right;
+  margin-right: 53px;
+}
+.features-road, .features-tourist, .features-area{
+  min-height: 256px;
+  width:400px;
+  text-align: center;
+}
+.features-area{
+  background-color: beige;
+  float:left;
+}
+.features-road{
+  background-color: coral;
+  float:left;
+}
+.features-tourist{
+  background-color: cornsilk;
+  float:right;
+}
+.features-area div{
+  margin:50px 44px 40px 42px;
+}
+.features-road div{
+  margin:50px 47px 40px 47px;
+}
+.features-tourist div{
+  margin:50px 52px 40px 52px;
+}
+.best-offer{
+  min-height: 766px;
+  background-color: floralwhite;
+}
+.best-offer-options{
+  width: 634px;
+  background-color: darkseagreen;
+  margin-left: 282px;
+  margin-right: 282px;
+  min-height: 147px;
+}
+.best-offer-options h2{
+  text-align: center;
+  padding-left: 30px;
+}
+.best-offer-options p{
+  text-align: center;
+}
+.best-offer-hotels{
+  width: 567px;
+  min-height: 87px;
+  background-color: brown;
+  margin-left: 316px;
+  margin-right: 316px;
+}
+.best-offer-hotels a{
+  color:white;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 33px 22px;
+}
+.hotels{
+  width: 567px;
+  min-height: 396px;
+  background-color: darkturquoise;
+  margin-left: 316px;
+  margin-right: 316px;
+}
+input[type='text']{
+  width:347px;
+  min-height: 40px;
+}
+
+#user-field-id-one{
+  margin-bottom: 30px;
+  margin-top: 56px;
+}
+#user-field-id-two{
+   margin-bottom: 30px;
+}
+/*Почему для тега label не получается задать white-space?*/
+
+button{
+  margin-bottom: 57px;
+}/*Почему не работает?*/
+
+.main-footer{
+  min-height: 121px;
+}
+/*В фетере нужен флоат?*/
+.footer-hastag, .footer-social{
+  float: left;
+  width: 400px;
+}
+.footer-copyright{
+  width: 400px;
+  float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
