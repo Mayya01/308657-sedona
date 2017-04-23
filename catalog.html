@@ -24,6 +24,7 @@
     <main>
 
       <form class = 'options' action='https://echo.htmlacademy.ru' method='get'>
+
        <div class = 'options-features'>
           <p>Инфраструктура</p>
 
@@ -59,29 +60,37 @@
           <p>Стоимость в сутки (Р)</p>
           <div> От 0</div>
           <div> До 3000 </div>
-          <input type="range" min="0" max="3000" step="1" name = 'price'>
-
+          <input type='range' min='0' max='3000' step'1' name = 'price'>
+          <button type = 'submit'>Показать</button>
         </div>
 
-        <button type = 'submit'>Показать</button>
+
       </form>
 
       <section class = 'sort'>
+
           <h2>Найдено:3</h2>
 
-          <div>
+          <div class = 'sort-type'>
             <p>Сортировка:</p>
-            <a  href = '#' class = 'sort-price'>По цене</a>
-            <a  href = '#' class = 'sort-type'>По типу</a>
-            <a  href = '#' class = 'sort-rating'>По рейтингу</a>
+            <ul>
+                <li><a  href = '#' class = 'sort-price'>По цене</a></li>
+                <li><a  href = '#' class = 'sort-type'>По типу</a></li>
+                <li><a  href = '#' class = 'sort-rating'>По рейтингу</a></li>
+              </ul>
           </div>
 
       </section>
+
       <div class = 'items'>
-        <article class = 'items-amara'>
 
-             <img src = 'img/amararesort.jpg' alt = 'amara resort'>
+        <article class = 'items-amara clearfix'>
 
+          <div class = 'items-amara-image'>
+             <img src = 'img/amararesort.jpg' alt = 'amara resort' width='136' height='90'>
+          </div>
+
+          <div class = 'items-amara-description'>
               <h2>Amara Resort & Spa</h2>
 
               <p>Гостиница</p>
@@ -89,15 +98,21 @@
 
               <p>от 3500 р.</p>
               <a href = '#' class = 'items-amara-book'>Забронировать</a>
+          </div>
 
-              <div class = 'items-amara-raitnig'>Рейтинг 8,5</div>
+          <div class = 'items-amara-information'>
+              <div class = 'items-amara-rating'>Рейтинг 8,5</div>
+          </div>
 
         </article>
 
-        <article class = 'items-quail'>
+        <article class = 'items-quail clearfix'>
 
+          <div class = 'items-quail-image'>
              <img src= 'img/quail.jpg' alt = 'Desert Quail Inn'>
+          </div>
 
+          <div class = 'items-quail-description'>
               <h2>Desert Quail Inn</h2>
 
               <p>Мотель</p>
@@ -105,15 +120,21 @@
 
               <p>от 2000 р.</p>
               <a href = '#' class = 'items-quail-book'>Забронировать</a>
+          </div>
 
+          <div class = 'items-amara-information'>
               <div class = 'items-quail-raitnig'> Рейтинг 8,9</div>
+          </div>
 
          </article>
 
-         <article class = 'items-poco'>
+         <article class = 'items-poco clearfix'>
 
+          <div class = 'items-poco-image'>
              <img src= 'img/pocodiablo.jpg' alt = 'Villas At Poco Diablo'>
+           </div>
 
+            <div class = 'items-poco-description'>
               <h2>Villas At Poco Diablo</h2>
 
               <p>Апартаменты</p>
@@ -121,8 +142,10 @@
 
               <p>от 4000 р.</p>
               <a href = '#' class = 'items-poco-book'>Забронировать</a>
-
+            </div>
+            <div class = 'items-poco-information'>
               <div class = 'items-poco-raitnig'>Рейтинг 9,2</div>
+           </div>
 
          </article>
       </div>

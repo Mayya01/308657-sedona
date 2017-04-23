@@ -98,33 +98,25 @@ main .logo-image {
 .advertising-items-first p{
   text-align:center;
 }
-.features-details-accomodation,
-.features-details-food,
-.features-details-presents{
+.features-details{
+  width: 400px;
+  float: left;
   padding-top: 60px;
-  min-height: 331px;
-  width:304px;
   text-align: center;
 }
-.features-details-accomodation{
+.accomodation{
   background-color: beige;
-  float:left;
-  margin-left: 47px;
-  margin-right: 92px;
 }
-.features-details-food{
+.food{
   background-color: coral;
-  float:left;
-  margin-right: 96px;
 }
-.features-details-presents{
+.presents{
   background-color: cornsilk;
-  float:right;
-  margin-right: 53px;
 }
-.features-road, .features-tourist, .features-area{
+.content{
+  padding: 50px 44px 40px 42px;
   min-height: 256px;
-  width:400px;
+  width:314px;/*Почему 314px?*/
   text-align: center;
 }
 .features-area{
@@ -137,16 +129,7 @@ main .logo-image {
 }
 .features-tourist{
   background-color: cornsilk;
-  float:right;
-}
-.features-area div{
-  margin:50px 44px 40px 42px;
-}
-.features-road div{
-  margin:50px 47px 40px 47px;
-}
-.features-tourist div{
-  margin:50px 52px 40px 52px;
+  float:left;
 }
 .best-offer{
   min-height: 766px;
@@ -217,6 +200,76 @@ button{
   width: 400px;
   float: right;
 }
+form{
+  width: 1200px;
+}
+.options-features{
+  background-color: aliceblue;
+}
+.options-accomodation{
+  background-color: floralwhite;
+}
+.options-accomodation,.options-features{
+   width:250px;
+   float: left;
+   min-height: 217px;
+}
+.price{
+  width: 700px;
+  float: right;
+  background-color: darksalmon;
+  min-height: 217px;
+}
+
+input[type='checkbox'],label{
+   margin-left: 73px;
+}
+label{
+   margin-left: 20px;
+}
+.options p{
+  text-align: center;
+  padding-top: 30px;
+}
+.sort{
+  min-height: 86px;
+  background-color: darkgrey;
+}
+
+.sort h2{
+  margin: 31px 49px 33px 46px;/*Почему не работает??Почему этот селектор выделяет не только заголовок h2, но и форму и получается почему-то что маргин задаётся форме, а не заголовку?*/
+}
+
+.items-amara-image, .items-quail-image, .items-poco-image{
+  min-height: 152px;
+  width: 182px;
+  float: left;
+  background-color: cornsilk
+}
+.items-amara-image img, .items-quail-image img, .items-poco-image img{
+  padding: 30px 46px;
+}
+.items-amara-description,.items-quail-description, .items-poco-description{
+  min-height: 152px;
+  width: 290px;
+  background-color: darksalmon;
+  float: left;
+}
+.items-amara-information,.items-quail-information, .items-poco-information{
+  min-height: 152px;
+  width: 728px;
+  float: right;
+  background-color: azure;
+}
+
+
+
+
+
+
+
+
+
 
 
 
