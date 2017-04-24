@@ -1,3 +1,4 @@
+*,
 *::before,
 *::after {
     box-sizing: inherit;
@@ -116,7 +117,7 @@ main .logo-image {
 .content{
   padding: 50px 44px 40px 42px;
   min-height: 256px;
-  width:314px;/*Почему 314px?*/
+  width:400px;
   text-align: center;
 }
 .features-area{
@@ -237,7 +238,7 @@ label{
 }
 
 .sort h2{
-  margin: 31px 49px 33px 46px;/*Почему не работает??Почему этот селектор выделяет не только заголовок h2, но и форму и получается почему-то что маргин задаётся форме, а не заголовку?*/
+  padding: 31px 49px 33px 46px;
 }
 
 .items-amara-image, .items-quail-image, .items-poco-image{
