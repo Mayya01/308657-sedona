@@ -11,6 +11,7 @@ body{
   font-size:14px;
   line-height: 1.3em;
   text-transform: uppercase;
+  background-color: rgb(242,242,242);
 }
 h1, h2{
   font-size:21px;
@@ -26,55 +27,75 @@ h3{
   width:1200px;
   margin:0 auto;
 }
-.main-navigation li{
-  display:inline-block;
+.main-header{
+  position: relative;
+  background-color: white;
+  min-height: 57px;
+  margin-bottom: -14px;
 }
-.main-navigation a{
-  display:block;
+.main-header img{
+  position: absolute;
+  top:-15px;
+  left: 570px;
 }
-main .logo-image {
+.main-navigation ul{
+  display: flex;
+  justify-content: space-between;
+}
+.main-header li{
+  list-style-type: none;
+}
+.main-header li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.main-logo{
+  background-image: url(/img/background%20photo.jpg);
+}
+.logo-image {
   width:456px;
   height: 343px;
 }
 .main-description{
-  background-color: aliceblue;
+  background-color: white;
   width: 1200px;
   min-height: 210px;
 }
 .main-description h1{
   text-align: center;
   white-space: pre-wrap;
+  margin-top:0;
   padding:60px 282px 34px 282px;
 }
 .main-description h3{
   text-align: center;
+  margin-bottom:0;
 }
 .advertising-items-first:nth-child(1),.advertising-items-first:nth-child(2){
   min-height: 257px;
 }
- .advertising-items-first:nth-child(1){
-  background-color:azure;
-  float:left;
+.advertising{
+  display: flex;
+}
+ .advertising-items-first:nth-child(1),.advertising-items-second:nth-child(2){
+  background-color: rgb(129,179,210);
   width:400px;
 }
  .advertising-items-first:nth-child(2){
-  background-color: antiquewhite;
-  float: right;
+  background-image: url(/img/backgroundimage1.jpg);
   width:800px;
+}
+.advertising-items-first p, .advertising-items-second p{
+  color: white;
 }
 .advertising-items-second:nth-child(1),
 .advertising-items-second:nth-child(2){
   min-height: 257px;
 }
 .advertising-items-second:nth-child(1){
-  float:left;
   width:800px;
-  background-color: antiquewhite;
-}
-.advertising-items-second:nth-child(2){
-  float:right;
-  width:400px;
-  background-color: azure;
+  background-image: url(/img/backgroundimage2.jpg);
 }
 .advertising-items-second p{
   text-align: center;
@@ -86,6 +107,12 @@ main .logo-image {
 }
 .advertising-items-second p:nth-child(2){
   padding-bottom: 25px;
+}
+.features{
+  display: flex;
+}
+.accomodation, .presents, .food{
+  background-color: white;
 }
 .clearfix::after {
   content: "";
@@ -101,18 +128,8 @@ main .logo-image {
 }
 .features-details{
   width: 400px;
-  float: left;
   padding-top: 60px;
   text-align: center;
-}
-.accomodation{
-  background-color: beige;
-}
-.food{
-  background-color: coral;
-}
-.presents{
-  background-color: cornsilk;
 }
 .content{
   padding: 50px 44px 40px 42px;
@@ -120,25 +137,27 @@ main .logo-image {
   width:400px;
   text-align: center;
 }
-.features-area{
-  background-color: beige;
-  float:left;
+.features-area,.features-road, .features-tourist{
+  background-color: rgb(238,238,238);
 }
-.features-road{
-  background-color: coral;
-  float:left;
-}
-.features-tourist{
-  background-color: cornsilk;
-  float:left;
+.cart{
+  background-image: url(/img/map.jpg)
 }
 .best-offer{
+  display: flex;
+  flex-direction: column;
   min-height: 766px;
   background-color: floralwhite;
 }
+.best-offer-interest{
+  background-color: white;
+}
+.best-offer-options h2{
+  margin-top: 0px;
+  padding-top: 56px;
+}
 .best-offer-options{
   width: 634px;
-  background-color: darkseagreen;
   margin-left: 282px;
   margin-right: 282px;
   min-height: 147px;
@@ -149,11 +168,13 @@ main .logo-image {
 }
 .best-offer-options p{
   text-align: center;
+  white-space: pre-wrap;
+  padding-top: 32px;/*Что неправильно? Почему слишком большой отступ?*/
 }
 .best-offer-hotels{
   width: 567px;
   min-height: 87px;
-  background-color: brown;
+  background-color: rgb(118,99,87);
   margin-left: 316px;
   margin-right: 316px;
 }
@@ -167,7 +188,7 @@ main .logo-image {
 .hotels{
   width: 567px;
   min-height: 396px;
-  background-color: darkturquoise;
+  background-color: white;
   margin-left: 316px;
   margin-right: 316px;
 }
@@ -176,6 +197,7 @@ input[type='text']{
   min-height: 40px;
 }
 
+
 #user-field-id-one{
   margin-bottom: 30px;
   margin-top: 56px;
@@ -183,23 +205,27 @@ input[type='text']{
 #user-field-id-two{
    margin-bottom: 30px;
 }
-/*Почему для тега label не получается задать white-space?*/
-
 button{
   margin-bottom: 57px;
 }/*Почему не работает?*/
 
 .main-footer{
+  display: flex;
   min-height: 121px;
+  background-color: white;
+  opacity: 0.902;
 }
-/*В фетере нужен флоат?*/
+.footer-hastag{
+  display: flex;
+  margin-left: 132px;
+  margin-top: 50px;
+}
+
 .footer-hastag, .footer-social{
-  float: left;
   width: 400px;
 }
 .footer-copyright{
   width: 400px;
-  float: right;
 }
 form{
   width: 1200px;
