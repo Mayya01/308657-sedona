@@ -196,8 +196,6 @@ input[type='text']{
   width:347px;
   min-height: 40px;
 }
-
-
 #user-field-id-one{
   margin-bottom: 30px;
   margin-top: 56px;
@@ -227,24 +225,17 @@ button{
 .footer-copyright{
   width: 400px;
 }
-form{
+.options{
   width: 1200px;
-}
-.options-features{
-  background-color: aliceblue;
-}
-.options-accomodation{
-  background-color: floralwhite;
+  display: flex;
+  background-image: url(/img/filterbackground.jpg)
 }
 .options-accomodation,.options-features{
    width:250px;
-   float: left;
    min-height: 217px;
 }
 .price{
   width: 700px;
-  float: right;
-  background-color: darksalmon;
   min-height: 217px;
 }
 
@@ -260,12 +251,33 @@ label{
 }
 .sort{
   min-height: 86px;
-  background-color: darkgrey;
+  background-color: white;
+  display: flex;
+}
+.sort h2{
+  margin-top: 0;
+  padding: 33px 49px 33px 46px;
+}
+.sort p{
+  margin-top: 0;
+  padding-top: 40px;
+  font-size: 12px;
+  line-height: 1.125em;
+}
+.sort ul{
+  display: flex;
+}
+.sort li{
+list-style-type: none;
+}
+.sort a{
+  text-decoration: none;
+  color: rgb(202,202,202);
+}
+.sort-price{
+  color: aqua;/*Почему не работает*/
 }
 
-.sort h2{
-  padding: 31px 49px 33px 46px;
-}
 
 .items-amara-image, .items-quail-image, .items-poco-image{
   min-height: 152px;
