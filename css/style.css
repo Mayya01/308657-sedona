@@ -26,6 +26,7 @@ h3{
 .container{
   width:1200px;
   margin:0 auto;
+ margin-top: -15px;
 }
 .main-header{
   position: relative;
@@ -35,23 +36,31 @@ h3{
 }
 .main-header img{
   position: absolute;
-  top:-15px;
+  top:0;
   left: 570px;
 }
 .main-navigation ul{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .main-header li{
   list-style-type: none;
+  margin-top: 21px;
 }
 .main-header li a {
   text-decoration: none;
   color: black;
   font-weight: bold;
 }
+
 .main-logo{
-  background-image: url(/img/background%20photo.jpg);
+  background-image: url(../img/bc.png), url(../img/background%20photo.jpg);
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: 0 bottom, 50% 0;
+  padding-top:50px;
+  padding-bottom: 50px;
+
 }
 .logo-image {
   width:456px;
@@ -72,76 +81,68 @@ h3{
   text-align: center;
   margin-bottom:0;
 }
-.advertising-items-first:nth-child(1),.advertising-items-first:nth-child(2){
-  min-height: 257px;
-}
 .advertising{
   display: flex;
-}
- .advertising-items-first:nth-child(1),.advertising-items-second:nth-child(2){
-  background-color: rgb(129,179,210);
-  width:400px;
-}
- .advertising-items-first:nth-child(2){
-  background-image: url(/img/backgroundimage1.jpg);
-  width:800px;
-}
-.advertising-items-first p, .advertising-items-second p{
-  color: white;
-}
-.advertising-items-second:nth-child(1),
-.advertising-items-second:nth-child(2){
   min-height: 257px;
 }
-.advertising-items-second:nth-child(1){
+.items-first:nth-child(1),.items-second:nth-child(2){
+  width: 400px;
+  background-color: rgb(129,179,210);
+}
+.items-second:nth-child(1){
   width:800px;
-  background-image: url(/img/backgroundimage2.jpg);
+  background-image: url(../img/backgroundimage2.jpg);
 }
-.advertising-items-second p{
+ .items-first:nth-child(2){
+  background-image: url(../img/backgroundimage1.jpg);
+  width:800px;
+}
+.advertising-content{
+  min-height: 166px;
+  width: 307;
+  color: white;
+  margin:50px 46px 40px 46px;
+}
+.advertising-content p{
   text-align: center;
-  white-space: pre-wrap;
 }
-.advertising-items-second p:nth-child(1){
-  padding-top:47px;
-  padding-bottom:23px;
+.advertising-area p,
+.advertising-road p,
+.advertising-tourist p{
+  color: black;
 }
-.advertising-items-second p:nth-child(2){
-  padding-bottom: 25px;
+.advertising-area p:nth-child(1),
+.advertising-road p:nth-child(1),
+.advertising-tourist p:nth-child(1){
+  font-weight: bold;
 }
+.advertising-area,
+.advertising-road,
+.advertising-tourist{
+  background-color: rgb(238,238,238);
+}
+
 .features{
   display: flex;
+  min-height: 330px;
 }
-.accomodation, .presents, .food{
+.features-details{
   background-color: white;
-}
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.advertising-items-first p:first-child{
-  white-space:pre-wrap;
-  text-align: center;
-}
-.advertising-items-first p{
-  text-align:center;
 }
 .features-details{
   width: 400px;
   padding-top: 60px;
   text-align: center;
 }
-.content{
-  padding: 50px 44px 40px 42px;
-  min-height: 256px;
-  width:400px;
-  text-align: center;
+.accomodation, .food, .presents{
+  font-weight: bold;
+  margin-top: 30px;
 }
-.features-area,.features-road, .features-tourist{
-  background-color: rgb(238,238,238);
+.samewrap{
+  white-space: pre-wrap;
 }
-.cart{
-  background-image: url(/img/map.jpg)
+.map{
+  background-image: url(../img/map.jpg)
 }
 .best-offer{
   display: flex;
@@ -155,6 +156,8 @@ h3{
 .best-offer-options h2{
   margin-top: 0px;
   padding-top: 56px;
+  text-align: center;
+  padding-left: 30px;
 }
 .best-offer-options{
   width: 634px;
@@ -162,14 +165,10 @@ h3{
   margin-right: 282px;
   min-height: 147px;
 }
-.best-offer-options h2{
-  text-align: center;
-  padding-left: 30px;
-}
 .best-offer-options p{
   text-align: center;
   white-space: pre-wrap;
-  padding-top: 32px;/*Что неправильно? Почему слишком большой отступ?*/
+  padding-top: 32px;
 }
 .best-offer-hotels{
   width: 567px;
@@ -186,49 +185,138 @@ h3{
   padding: 33px 22px;
 }
 .hotels{
-  width: 567px;
+  width: 568px;
   min-height: 396px;
   background-color: white;
   margin-left: 316px;
   margin-right: 316px;
 }
+.hotels label{
+  margin-left: 55px;
+}
+label[for = 'user-field-id-one']{
+  margin-right: 21px;
+}
+label[for = 'user-field-id-two']{
+  margin-right: 17px;
+}
+label[for = 'for-adults']{
+  margin-right: 38px;
+}
 input[type='text']{
-  width:347px;
+  width:346px;
   min-height: 40px;
+  background-color: rgb(242,242,242);
+  border:none;
+}
+.formblock{
+  position: relative;
+}
+
+.formblock:nth-child(2) img{
+  position: absolute;
+  top: 10px;
+  right:70px;
+}
+.formblock:nth-child(1) img {
+  position: absolute;
+  top:65px;
+  right: 70px;
 }
 #user-field-id-one{
-  margin-bottom: 30px;
   margin-top: 56px;
 }
-#user-field-id-two{
-   margin-bottom: 30px;
+#user-field-id-two, #user-field-id-one{
+  padding-left: 12px;
+  margin-bottom: 30px;
 }
-button{
-  margin-bottom: 57px;
-}/*Почему не работает?*/
-
+button[name = 'results']{
+  background-color: rgb(129,179,210);
+  width: 458px;
+  height: 58px;
+  border: none;
+  margin: 55px;
+  color: white;
+  font-weight: bold;
+  font-size: 21px;
+  text-transform: uppercase;
+  padding: 17px 195px;
+}
+button[name = 'results']:hover, .social-btn:hover{
+  background-color: rgb(102,158,192);
+}
+button[name = 'results']:active{
+  background-color: rgb(84,150,189);
+  color: rgba(255,255,255, 0.3)
+}
 .main-footer{
   display: flex;
   min-height: 121px;
-  background-color: white;
-  opacity: 0.902;
+  background-color: rgba(255,255,255,0.8);
+  position: relative;
+  margin-top: -121px;
 }
 .footer-hastag{
   display: flex;
   margin-left: 132px;
   margin-top: 50px;
 }
-
+.footer-hastag a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
 .footer-hastag, .footer-social{
   width: 400px;
 }
 .footer-copyright{
   width: 400px;
 }
+.footer-social{
+  margin-top: 35px;
+}
+.social-btn{
+  display: inline-block;
+  vertical-align: top;
+  width: 43px;
+  height: 43px;
+  font-size: 0;
+  background-color: rgb(129,179,210);
+  position: relative;
+}
+.social-btn:active{
+  background-color: rgb(84,150,189);
+}
+.social-btn::before{
+  content: '';
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../img/sprite1.png);
+  background-repeat: no-repeat;
+}
+.social-btn-tv::before{
+  width: 17px;
+  height: 15px;
+  background-position: -10px -49px;
+}
+.social-btn-fb::before{
+  width: 10px;
+  height: 19px;
+  background-position: -10px -10px;
+}
+.social-btn-you::before{
+  width: 20px;
+  height: 16px;
+  height: 16px;
+  background-position: -10px -84px;
+}
+
 .options{
   width: 1200px;
   display: flex;
-  background-image: url(/img/filterbackground.jpg)
+  background-image: url(../img/filterbackground.jpg)
 }
 .options-accomodation,.options-features{
    width:250px;
@@ -277,8 +365,6 @@ list-style-type: none;
 .sort-price{
   color: aqua;/*Почему не работает*/
 }
-
-
 .items-amara-image, .items-quail-image, .items-poco-image{
   min-height: 152px;
   width: 182px;
@@ -299,6 +385,11 @@ list-style-type: none;
   width: 728px;
   float: right;
   background-color: azure;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 

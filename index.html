@@ -41,78 +41,84 @@
         </section>
 
         <section class = 'advertising'>
-          <div class = 'advertising-items-first'>
-
+          <div class = 'advertising items-first'>
+        <div class = 'advertising-content'>
             <p>Настоящий
 городок</p>
 
             <p>-№1-</p>
             <p>Седона - не аттракцион для туристов,
           там течём своя жизнь</p>
+        </div>
           </div>
-          <div class = 'advertising-items-first'></div>
+          <div class = 'advertising items-first'></div>
         </section>
 
         <section class = 'features'>
-          <div class = 'features-details accomodation' >
+          <div class = 'features-details' >
             <img src= 'img/house.png' alt = 'accomodation' >
-            <p>Жильё</p>
-            <p>Рекомендуем пожить в настоящем мотеле,все как в кино!</p>
+            <p class = 'accomodation'>Жильё</p>
+            <p class = 'samewrap'>Рекомендуем пожить в настоящем
+  мотеле,все как в кино!</p>
           </div>
 
-          <div class = 'features-details food'>
+          <div class = 'features-details'>
             <img src= 'img/food.png' alt = 'food'>
-            <p>Еда</p>
-            <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            <p class = 'food'>Еда</p>
+            <p class = 'samewrap'>Всегда заказывайте фирменный бургер,
+  вы не разочаруетесь!</p>
           </div>
 
-          <div class = 'features-details presents'>
+          <div class = 'features-details'>
             <img src= 'img/presents.png' alt = 'presents'>
-            <p>Сувениры</p>
-            <p>Не только китайского, но и местного производства</p>
+            <p class = 'presents'>Сувениры</p>
+            <p class = 'samewrap'>Не только китайского, но и местного
+  производства!</p>
           </div>
         </section>
 
         <section class = 'advertising'>
-          <div class = 'advertising-items-second'></div>
+          <div class = 'advertising items-second'></div>
 
-          <div class = 'advertising-items-second'>
+          <div class = 'advertising items-second'>
+           <div class = 'advertising-content'>
             <p>Там есть
     Мост Дьявола</p>
             <p>-№2-</p>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
+        </div>
         </section>
 
-        <section class = 'features clearfix'>
+        <section class = 'advertising'>
 
-          <div class = 'features-area content'>
-
+          <div class = 'advertising-area'>
+            <div class = 'advertising-content'>
                 <p>Небольшая Площадь</p>
                 <p>-№3-</p>
                 <p>Все достопримечательности находятся очень близко</p>
-
+            </div>
           </div>
 
-          <div class = 'features-road content'>
-
+          <div class = 'advertising-road '>
+            <div class = 'advertising-content'>
                 <p>Красивая Дорога</p>
                 <p>-№4-</p>
                 <p>Ехать в Седону из Лас-Вегаса совсем не скучно</p>
-
+            </div>
           </div>
 
-          <div class = 'features-tourist content'>
-
+          <div class = 'advertising-tourist '>
+            <div class = 'advertising-content'>
                 <p>Мало туристов</p>
                 <p>-№5-</p>
                 <p>Большинство едет в Гранд Каньон и толпится там</p>
-
+            </div>
           </div>
 
         </section>
 
-        <article class = 'best-offer'>
+      <article class = 'best-offer'>
 
         <div class = 'best-offer-interest'>
           <div class = 'best-offer-options'>
@@ -126,22 +132,30 @@
         </div>
 
 
-        <div class = 'best-offer cart'>
+        <div class = 'best-offer map'>
           <form class = 'hotels' action= ' https://echo.htmlacademy.ru'  method = 'get' >
 
+          <div class = 'formblock'>
             <label for = 'user-field-id-one'>Дата заезда:</label>
             <input id = 'user-field-id-one' type='text' name='time-of-checkin' placeholder= '24 Апреля 2016' required>
+            <img src = 'img/kalendar1.png' alt = 'kalendar'>
+          </div>
 
-
+          <div class = 'formblock'>
             <label for = 'user-field-id-two' >Дата Выезда:</label>
             <input id = 'user-field-id-two' type='text' name='time-of-checkout' placeholder= '4 июля 2016' required>
+            <img src = 'img/kalendar1.png' alt = 'kalendar'>
+          </div>
 
+          <div class = 'formblock'>
             <label for = 'for-adults'>Взрослые:</label>
             <input id = 'for-adults' type = 'text'>2
+          </div>
 
+          <div class = 'formblock'>
             <label for = 'for-children'>Дети:</label>
             <button id = 'for-children' type = 'submit'>0</button>
-
+          </div>
             <button type = 'submit' name = 'results'>Найти</button>
 
           </form>
@@ -160,15 +174,17 @@
 
           <section class = 'footer-social'>
 
-            <a class="social-btn social-btn-tv" href="#"><img src = 'img/t' alt = 'twitter'></a>
-            <a class="social-btn social-btn-fb" href="#"><img src = 'img/f.png' alt = 'facebook'></a>
-            <a class="social-btn social-btn-inst" href="#"><img src = 'img/youtube.png' alt = 'youtube'></a>
+            <a class=' social-btn social-btn-tv'  href= '#' ></a>
+            <a class= 'social-btn social-btn-fb'  href= '#'></a>
+            <a class= 'social-btn social-btn-you' href='#'></a>
+
 
           </section>
 
         <section class = 'footer-copyright'>
 
-          <a>WEBSITE BY<img src= 'img/html.png' alt = 'htmlacademy'></a>
+          <a href = '#'>WEBSITE BY</a>
+          <a href = '#'></a>
 
         </section>
     </footer>
