@@ -249,32 +249,6 @@ button[name = 'results']:active{
   background-color: rgb(84,150,189);
   color: rgba(255,255,255, 0.3)
 }
-.main-footer{
-  display: flex;
-  min-height: 121px;
-  background-color: rgba(255,255,255,0.8);
-  position: relative;
-  margin-top: -121px;
-}
-.footer-hastag{
-  display: flex;
-  margin-left: 132px;
-  margin-top: 50px;
-}
-.footer-hastag a{
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-}
-.footer-hastag, .footer-social{
-  width: 400px;
-}
-.footer-copyright{
-  width: 400px;
-}
-.footer-social{
-  margin-top: 35px;
-}
 .social-btn{
   display: inline-block;
   vertical-align: top;
@@ -327,8 +301,34 @@ button[name = 'results']:active{
   min-height: 217px;
 }
 
-input[type='checkbox'],label{
-   margin-left: 73px;
+input[type='checkbox']{
+  display: none;
+}
+input[type='checkbox'] + label{
+  display: block;
+  margin: 10px 18px 10px 71px;
+  line-height: 20px;
+  padding-left: 45px;
+  position: relative;
+}
+input[type='checkbox'] + label::before{
+  content: '';
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 1px;
+  border: 2px solid white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+input[type='checkbox']:checked + label::after{
+  content: '';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 label{
    margin-left: 20px;
@@ -341,6 +341,7 @@ label{
   min-height: 86px;
   background-color: white;
   display: flex;
+  position: relative;
 }
 .sort h2{
   margin-top: 0;
@@ -354,42 +355,237 @@ label{
 }
 .sort ul{
   display: flex;
+  margin-top: 38px;
 }
 .sort li{
-list-style-type: none;
+  list-style-type: none;
 }
-.sort a{
+.sorting{
   text-decoration: none;
   color: rgb(202,202,202);
+  border-bottom: 1px dotted rgb(129,179,210);
+  margin-right: 35px;
 }
-.sort-price{
-  color: aqua;/*Почему не работает*/
+.sorting:hover{
+  color: rgb(129,179,210);
+  border-bottom: 1px dotted rgb(129,179,210);
 }
-.items-amara-image, .items-quail-image, .items-poco-image{
-  min-height: 152px;
-  width: 182px;
-  float: left;
-  background-color: cornsilk
+.sorting:active{
+  color: black;
+  border-bottom: none;
 }
-.items-amara-image img, .items-quail-image img, .items-poco-image img{
-  padding: 30px 46px;
+.sort .active{
+  color: rgb(129,179,210);
+  border: none;
 }
-.items-amara-description,.items-quail-description, .items-poco-description{
-  min-height: 152px;
-  width: 290px;
-  background-color: darksalmon;
-  float: left;
+.sort-guide{
+  width: 11px;
+  height: 10px;
+  position: absolute;
 }
-.items-amara-information,.items-quail-information, .items-poco-information{
+.active-guide{
+  background-image: url(../img/triangle6.png);
+  background-repeat: no-repeat;
+  top: 39px;
+  right:73px;
+}
+.sort-guide:first-child{
+  background-image: url(../img/triangle1.png);
+  background-repeat: no-repeat;
+  top: 40px;
+  right:96px;
+}
+.sort-guide:hover{
+  background-image: url(../img/triangle2.png);
+}
+.active-guide:hover{
+  background-image: url(../img/triangle5.png);
+}
+.sort-guide:active{
+  background-image: url(../img/triangle3.png);
+}
+.active-guide:active{
+  background-image: url(../img/triangle6.png);
+}
+.items{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.items-amara,
+.items-quail,
+.items-poco{
+  display: flex;
+  min-height: 150px;
+}
+.items-amara,
+.items-quail,
+.items-poco{
+  border-bottom: 1px solid rgb(229,229,229);
+}
+.items-amara{
+  border-top: 1px solid rgb(229,229,229);
+}
+.items img{
+  margin: 30px 30px 30px 72px;
+}
+.items h2{
+  margin-top: 0;
+  padding-top: 28px;
+  min-height: 32px;
+}
+.items h2:hover{
+  color: rgb(129, 179, 210);
+}
+.items h2:active{
+  color: rgb(202, 202, 202);
+}
+
+.amara-description p, .amara-description a,
+.quail-description p, .quail-description a,
+.poco-description p, .poco-description a{
+  display: inline-block;
+  width: 200px;
+}
+.amara-description p,
+.quail-description p,
+.poco-description {
+  margin-top: -10px;/*????*/
+}
+.amara-book,.amara-details,
+.quail-details, .quail-book,
+.poco-details, .poco-book {
+  min-height:27px;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 5px;
+  color: white;
+  margin-top: -20px;/*????*/
+}
+.amara-details,
+.quail-details,
+.poco-details{
+  width: 110px;
+  background-color: rgb(129, 179, 210);
+}
+.amara-details:hover,
+.quail-details:hover,
+.poco-details:hover{
+  background-color: rgb(102, 158, 192);
+}
+.amara-details:active,
+.quail-details:active,
+.poco-details:active{
+  background-color: rgb(84, 150, 189);
+  color: rgba(255,255,255, 0.3)
+}
+.amara-book,
+.quail-book,
+.poco-book{
+  width: 142px;
+  background-color: rgb(118, 99, 87);
+}
+.amara-book:hover,
+.quail-book:hover,
+.poco-book:hover{
+  background-color: rgb(96, 78, 67);
+}
+.amara-book:active,
+.quail-book:active,
+.poco-book:active{
+  color: rgba(255,255,255, 0.3);
+  background-color: rgb(80, 62, 51);
+}
+
+.amara-description,
+.quail-description,
+.poco-description{
+  width: 544px;
+}
+
+.amara-information,
+.quail-information,
+.poco-information{
   min-height: 152px;
   width: 728px;
-  float: right;
-  background-color: azure;
+  position: relative;
 }
-.clearfix::after {
-  content: "";
-  display: block;
-  clear: both;
+.amara-rating,
+.poco-raitnig,
+.quail-raitnig{
+  width: 110px;
+  min-height: 27px;
+  background-color: rgb(242, 242, 242);
+  text-align: center;
+  padding-top: 4px;
+  margin-top: 93px;
+  margin-right: 73px;/*??Не работает??*/
+  position: absolute;/*Нужно ли?*/
+  right: 73px;/*Нужно ли?*/
+}
+.raitning-image{
+  margin-top: 29px;
+  width: 89px;
+  height: 17px;
+  background-image: url(../img/stars.png);
+  margin-right: 73px;/*Не работает?*/
+  position: absolute;
+  right: 73px;
+}
+.quail-information .raitning-image{
+  width: 65px;
+}
+.poco-information .raitning-image{
+  width: 42px;
+}
+.main-footer{
+  display: flex;
+  min-height: 121px;
+  background-color: rgba(255,255,255,0.8);
+  position: relative;
+  margin-top: -121px;
+}
+#noopacity{
+  background-color: rgb(255,255,255);
+  margin-top:0;
+}
+.footer-hastag{
+  display: flex;
+  margin-left: 132px;
+  margin-top: 50px;
+}
+.footer-hastag a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+.footer-hastag, .footer-social{
+  width: 400px;
+}
+.footer-copyright{
+  width: 400px;
+}
+.footer-social{
+  margin-top: 35px;
+}
+.footer-copyright{
+  display: flex;
+  position: relative;
+  border: 1px solid black;
+}
+.footer-copyright div{
+  width: 113px;
+  min-height: 39px;
+  background-image: url(../img/academy1.png);
+}
+.footer-copyright div{
+  margin-top: 41px;
+  position: absolute;
+  background-position: 100% 100%;/*Должен быть в правом нижнем углу.???*/
+}
+.footer-copyright a{
+  position: absolute;
+  left: 30px;
 }
 
 
