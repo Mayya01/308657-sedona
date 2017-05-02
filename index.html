@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title> Седона</title>
+ <link rel="stylesheet" href="css/normalize.css">
  <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -12,10 +13,10 @@
         <nav class = 'main-navigation'>
           <ul>
 
-            <li><a href = '#'>Информация</a></li>
-            <li><a href = '#'>Фото и видео</a></li>
-            <li><a href = '#'>Карта штата</a></li>
-            <li><a href = '#'>Гостиницы</a></li>
+            <li class = 'navigation-left'><a href = '#'>Информация</a></li>
+            <li class = 'navigation-left'><a href = '#'>Фото и видео</a></li>
+            <li class = 'navigation-right'><a href = '#'>Карта штата</a></li>
+            <li class = 'navigation-right'><a href = '#'>Гостиницы</a></li>
 
           </ul>
         </nav>
@@ -56,21 +57,24 @@
 
         <section class = 'features'>
           <div class = 'features-details' >
-            <img src= 'img/house.png' alt = 'accomodation' >
+            <a href = '#' class = 'features-image accomodation-link'></a>
+            <!--<img src= 'img/house.png' alt = 'accomodation' >-->
             <p class = 'accomodation'>Жильё</p>
             <p class = 'samewrap'>Рекомендуем пожить в настоящем
   мотеле,все как в кино!</p>
           </div>
 
           <div class = 'features-details'>
-            <img src= 'img/food.png' alt = 'food'>
+           <a href = '#' class = 'features-image food-link'></a>
+            <!--<img src= 'img/food.png' alt = 'food'>-->
             <p class = 'food'>Еда</p>
             <p class = 'samewrap'>Всегда заказывайте фирменный бургер,
   вы не разочаруетесь!</p>
           </div>
 
           <div class = 'features-details'>
-            <img src= 'img/presents.png' alt = 'presents'>
+           <a href = '#' class = 'features-image presents-link'></a>
+            <!--<img src= 'img/presents.png' alt = 'presents'>-->
             <p class = 'presents'>Сувениры</p>
             <p class = 'samewrap'>Не только китайского, но и местного
   производства!</p>
@@ -123,7 +127,7 @@
         <div class = 'best-offer-interest'>
           <div class = 'best-offer-options'>
             <h2>Заинтересовались?</h2>
-            <p>Укажите Преполгаемые даты поездки,
+            <p>Укажите Предполагаемые даты поездки,
             и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           </div>
           <div class = 'best-offer-hotels'>
@@ -138,18 +142,21 @@
           <div class = 'formblock'>
             <label for = 'user-field-id-one'>Дата заезда:</label>
             <input id = 'user-field-id-one' type='text' name='time-of-checkin' placeholder= '24 Апреля 2016' required>
-            <img src = 'img/kalendar1.png' alt = 'kalendar'>
+            <a href = '#' class = 'date-checkin'></a>
           </div>
 
           <div class = 'formblock'>
             <label for = 'user-field-id-two' >Дата Выезда:</label>
             <input id = 'user-field-id-two' type='text' name='time-of-checkout' placeholder= '4 июля 2016' required>
-            <img src = 'img/kalendar1.png' alt = 'kalendar'>
+
+            <a href = '#' class = 'date-checkout'></a>
           </div>
 
           <div class = 'formblock'>
             <label for = 'for-adults'>Взрослые:</label>
-            <input id = 'for-adults' type = 'text'>2
+            <a href = '#' class = 'adultsbox-bth  minus'></a>
+            <input id = 'for-adults' type = 'text' class = 'adults'>2
+            <a href = '#' class = 'adultsbox-bth plus'></a>
           </div>
 
           <div class = 'formblock'>
@@ -183,8 +190,8 @@
 
         <section class = 'footer-copyright'>
 
-          <a href = '#'>WEBSITE BY</a>
-          <a href = '#'></a>
+          <a href = '#' class = 'copyright-sign'>WEBSITE BY</a>
+          <a href = '#' class = 'copyright-logo'></a>
 
         </section>
     </footer>

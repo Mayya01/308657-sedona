@@ -28,6 +28,7 @@ h3{
   margin:0 auto;
  margin-top: -15px;
 }
+/*стили для header: index.html,catalog.html*/
 .main-header{
   position: relative;
   background-color: white;
@@ -38,15 +39,26 @@ h3{
   position: absolute;
   top:0;
   left: 570px;
+  z-index: 10;
 }
 .main-navigation ul{
   display: flex;
   justify-content: space-around;
 }
+
 .main-header li{
   list-style-type: none;
   margin-top: 21px;
+  width: 20%;
+  background-color: cadetblue;
 }
+.navigation-left{
+  text-align: left;/*Почему не работает? Если убрать justify-content: space-around, то "Карта штата налезает на логотип"*/
+}
+.navigation-right{
+  text-align: right;/*Почему не работает? Если убрать justify-content: space-around, то "Карта штата налезает на логотип"*/
+}
+
 .main-header li a {
   text-decoration: none;
   color: black;
@@ -66,6 +78,7 @@ h3{
   width:456px;
   height: 343px;
 }
+/*Стили к index.html, для блоков с рекламой*/
 .main-description{
   background-color: white;
   width: 1200px;
@@ -105,6 +118,10 @@ h3{
 }
 .advertising-content p{
   text-align: center;
+  font-size: 14px;
+}
+.advertising-content p:first-child{
+  font-size: 21px;
 }
 .advertising-area p,
 .advertising-road p,
@@ -125,22 +142,51 @@ h3{
 .features{
   display: flex;
   min-height: 330px;
-}
-.features-details{
-  background-color: white;
+  position: relative;
 }
 .features-details{
   width: 400px;
-  padding-top: 60px;
+  padding-top: 164px;
   text-align: center;
+  background-color: white;
 }
 .accomodation, .food, .presents{
   font-weight: bold;
-  margin-top: 30px;
+  font-size: 21px;
+}
+.features-image{
+  display: block;
+  background-image: url(../img/sprite2.png);
+}
+.accomodation-link{
+  width: 75px;
+  height: 72px;
+  background-position: -10px -358px;
+  position: absolute;
+  top: 60px;
+  left: 162px;
+}
+.food-link{
+  width: 74px;
+  height: 70px;
+  background-position: -10px -268px;
+  position: absolute;
+  top: 60px;
+  left: 560px;
+}
+.presents-link{
+  width: 64px;
+  height: 76px;
+  background-position: -10px -769px;
+  position: absolute;
+  bottom: 200px;
+  right: 170px;
 }
 .samewrap{
   white-space: pre-wrap;
 }
+
+/*Стили к index.html:форма, блок поверх формы, карта*/
 .map{
   background-image: url(../img/map.jpg)
 }
@@ -155,20 +201,21 @@ h3{
 }
 .best-offer-options h2{
   margin-top: 0px;
-  padding-top: 56px;
   text-align: center;
   padding-left: 30px;
+  font-size: 30px;
 }
 .best-offer-options{
   width: 634px;
   margin-left: 282px;
   margin-right: 282px;
+  margin-top: 56px;
   min-height: 147px;
 }
 .best-offer-options p{
   text-align: center;
   white-space: pre-wrap;
-  padding-top: 32px;
+  padding-top: 31px;
 }
 .best-offer-hotels{
   width: 567px;
@@ -193,6 +240,7 @@ h3{
 }
 .hotels label{
   margin-left: 55px;
+  font-weight: bold;
 }
 label[for = 'user-field-id-one']{
   margin-right: 21px;
@@ -208,28 +256,50 @@ input[type='text']{
   min-height: 40px;
   background-color: rgb(242,242,242);
   border:none;
+  font-weight: bold;
 }
-.formblock{
-  position: relative;
+input[type='text']:hover{
+  background-color: rgb(235,235,235);
 }
-
-.formblock:nth-child(2) img{
-  position: absolute;
-  top: 10px;
-  right:70px;
-}
-.formblock:nth-child(1) img {
-  position: absolute;
-  top:65px;
-  right: 70px;
+input[type='text']:focus{
+  background-color: transparent;
+  border: none;/*Как сделать рамку как в стайлгайде? Как убрать голубую обводку*/
 }
 #user-field-id-one{
   margin-top: 56px;
+  width:346px;
 }
 #user-field-id-two, #user-field-id-one{
   padding-left: 12px;
   margin-bottom: 30px;
 }
+.formblock{
+  position:relative;
+}
+.date-checkin, .date-checkout{
+  display: block;
+  position: absolute;
+  background-image: url(../img/sprite2.png);
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 22px;
+  background-position: -10px -450px;
+}
+.date-checkin{
+  top: 65px;
+  right: 65px;
+}
+ .date-checkout{
+  top: 10px;
+  right: 65px;
+}
+.date-checkin:hover, .date-checkout:hover{
+  background-position: -10px -492px;
+}
+.date-checkin:active, .date-checkout:active{
+ background-position: -10px -534px;
+}
+
 button[name = 'results']{
   background-color: rgb(129,179,210);
   width: 458px;
@@ -249,6 +319,16 @@ button[name = 'results']:active{
   background-color: rgb(84,150,189);
   color: rgba(255,255,255, 0.3)
 }
+
+.adultsbox-btn{
+  display: block;
+  vertical-align: top;
+  width: 38px;
+  height: 38px;
+  background-color: rgb(242,242,242);
+  position: relative;
+}/*Почему не видно этих ссылок!?*/
+
 .social-btn{
   display: inline-block;
   vertical-align: top;
@@ -258,38 +338,10 @@ button[name = 'results']:active{
   background-color: rgb(129,179,210);
   position: relative;
 }
-.social-btn:active{
-  background-color: rgb(84,150,189);
-}
-.social-btn::before{
-  content: '';
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%, -50%);
-  background-image: url(../img/sprite1.png);
-  background-repeat: no-repeat;
-}
-.social-btn-tv::before{
-  width: 17px;
-  height: 15px;
-  background-position: -10px -49px;
-}
-.social-btn-fb::before{
-  width: 10px;
-  height: 19px;
-  background-position: -10px -10px;
-}
-.social-btn-you::before{
-  width: 20px;
-  height: 16px;
-  height: 16px;
-  background-position: -10px -84px;
-}
-
 .options{
   width: 1200px;
   display: flex;
+  position: relative;
   background-image: url(../img/filterbackground.jpg)
 }
 .options-accomodation,.options-features{
@@ -538,6 +590,7 @@ label{
 .poco-information .raitning-image{
   width: 42px;
 }
+/*Стили для футера*/
 .main-footer{
   display: flex;
   min-height: 121px;
@@ -568,29 +621,361 @@ label{
 .footer-social{
   margin-top: 35px;
 }
-.footer-copyright{
-  display: flex;
-  position: relative;
-  border: 1px solid black;
+.copyright-sign{
+  display: block;
+  text-decoration: none;
+  position: absolute;
+  top: 53px;
+  right: 224px;
+  color: black;
 }
-.footer-copyright div{
+
+.copyright-logo{
+  display: block;
+  background-image: url(../img/sprite2.png);
   width: 113px;
-  min-height: 39px;
-  background-image: url(../img/academy1.png);
-}
-.footer-copyright div{
-  margin-top: 41px;
+  height: 39px;
+  background-position: -10px -10px;
   position: absolute;
-  background-position: 100% 100%;/*Должен быть в правом нижнем углу.???*/
+  top: 41px;
+  right: 103px;
 }
-.footer-copyright a{
+
+.social-btn:active{
+  background-color: rgb(84,150,189);
+}
+.social-btn::before{
+  content: '';
   position: absolute;
-  left: 30px;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../img/sprite2.png);
+  background-repeat: no-repeat;
+}
+.social-btn-tv::before{
+  width: 17px;
+  height: 15px;
+  background-position: -10px -949px;
+}
+.social-btn-fb::before{
+  width: 10px;
+  height: 19px;
+  background-position: -10px -229px;
+}
+.social-btn-you::before{
+  width: 20px;
+  height: 16px;
+  background-position: -10px -1194px;
+}
+/*Стили для ползунка, демо*/
+.filter-range {
+  width: 330px;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: absolute;/*Нужно ли здесь позиционирование? В Демо его не было. Относительное позиционирование задано у блока .optionsстрока 341*/
+  top: 26px;
+  right: 74px;
+}
+
+.filter-range-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.price-controls {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+  font-size: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin-right: 20px;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
 }
 
 
 
+/*.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
 
+.sprite-academy1 {
+    width: 113px;
+    height: 39px;
+    background-position: -10px -10px;
+}
+
+.sprite-academy2 {
+    width: 113px;
+    height: 39px;
+    background-position: -10px -69px;
+}
+
+.sprite-academy3 {
+    width: 113px;
+    height: 39px;
+    background-position: -10px -128px;
+}
+
+.sprite-checkbox {
+    width: 26px;
+    height: 22px;
+    background-position: -10px -187px;
+}
+
+.sprite-f {
+    width: 10px;
+    height: 19px;
+    background-position: -10px -229px;
+}
+
+.sprite-food {
+    width: 74px;
+    height: 70px;
+    background-position: -10px -268px;
+}
+
+.sprite-house {
+    width: 75px;
+    height: 72px;
+    background-position: -10px -358px;
+}
+
+.sprite-kalendar1 {
+    width: 21px;
+    height: 22px;
+    background-position: -10px -450px;
+}
+
+.sprite-kalendar2 {
+    width: 21px;
+    height: 22px;
+    background-position: -10px -492px;
+}
+
+.sprite-kalendar3 {
+    width: 21px;
+    height: 22px;
+    background-position: -10px -534px;
+}
+
+.sprite-minus1 {
+    width: 12px;
+    height: 3px;
+    background-position: -10px -576px;
+}
+
+.sprite-minus2 {
+    width: 12px;
+    height: 3px;
+    background-position: -10px -599px;
+}
+
+.sprite-minus3 {
+    width: 12px;
+    height: 3px;
+    background-position: -10px -622px;
+}
+
+.sprite-plus {
+    width: 11px;
+    height: 11px;
+    background-position: -10px -645px;
+}
+
+.sprite-plus1 {
+    width: 11px;
+    height: 11px;
+    background-position: -10px -676px;
+}
+
+.sprite-plus1---_____ {
+    width: 11px;
+    height: 11px;
+    background-position: -10px -707px;
+}
+
+.sprite-plus3 {
+    width: 11px;
+    height: 11px;
+    background-position: -10px -738px;
+}
+
+.sprite-presents {
+    width: 64px;
+    height: 76px;
+    background-position: -10px -769px;
+}
+
+.sprite-square {
+    width: 22px;
+    height: 22px;
+    background-position: -10px -865px;
+}
+
+.sprite-squareblock {
+    width: 26px;
+    height: 22px;
+    background-position: -10px -907px;
+}
+
+.sprite-t {
+    width: 17px;
+    height: 15px;
+    background-position: -10px -949px;
+}
+
+.sprite-triangle1 {
+    width: 11px;
+    height: 10px;
+    background-position: -10px -984px;
+}
+
+.sprite-triangle2 {
+    width: 11px;
+    height: 10px;
+    background-position: -10px -1014px;
+}
+
+.sprite-triangle2---_____ {
+    width: 11px;
+    height: 10px;
+    background-position: -10px -1044px;
+}
+
+.sprite-triangle3 {
+    width: 11px;
+    height: 10px;
+    background-position: -10px -1074px;
+}
+
+.sprite-triangle4 {
+    width: 11px;
+    height: 10px;
+    background-position: -10px -1104px;
+}
+
+.sprite-triangle5 {
+    width: 11px;
+    height: 10px;
+    background-position: -10px -1134px;
+}
+
+.sprite-triangle6 {
+    width: 11px;
+    height: 10px;
+    background-position: -10px -1164px;
+}
+
+.sprite-youtube {
+    width: 20px;
+    height: 16px;
+    background-position: -10px -1194px;
+}
+
+*/
 
 
 
