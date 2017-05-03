@@ -8,26 +8,29 @@
   </head>
   <body>
    <div class = 'container'>
+
     <header class = 'main-header'>
-
-       <img src= 'img/logo.png' alt = 'Логотип'>
         <nav class = 'main-navigation'>
-          <ul>
+          <ul class = 'navigation'>
 
-            <li><a href = '#'>Информация</a></li>
-            <li><a href = '#'>Фото и видео</a></li>
-            <li><a href = '#'>Карта штата</a></li>
-            <li><a href = '#'>Гостиницы</a></li>
+            <li class = 'navigation-left'><a href = '#'>Информация</a></li>
+            <li class = 'navigation-left'><a href = '#'>Фото и видео</a></li>
+            <li class = 'navigation-right'><a href = '#'>Карта штата</a></li>
+            <li class = 'navigation-right'><a href = '#'>Гостиницы</a></li>
 
           </ul>
         </nav>
+        <img src= 'img/logo.png' alt = 'Логотип'>
     </header>
     <main>
 
       <form class = 'options' action='https://echo.htmlacademy.ru' method='get'>
 
        <div class = 'options-features'>
+
           <p>Инфраструктура</p>
+
+        <div class = 'options-checkbox'>
 
           <input type="checkbox" name = 'pool' id = 'swimming-pool' checked>
           <label for = 'swimming-pool'>Бассейн</label>
@@ -38,11 +41,15 @@
           <input type="checkbox" name = 'wf' id = 'wi-fi'>
           <label for = 'wi-fi'>Wi-fi</label>
 
+         </div>
+
       </div>
 
        <div class = 'options-accomodation'>
-
           <p>Тип Жилья</p>
+
+        <div class = 'options-checkbox'>
+
           <input type="checkbox" name = 'hotels' id = 'hotels' checked>
           <label for = 'hotels'>Гостиница</label>
 
@@ -51,6 +58,8 @@
 
           <input type="checkbox" name = 'apartments' id = 'apartments' checked>
           <label for = 'apartments'>Апартаменты</label>
+
+         </div>
 
 
 

@@ -9,11 +9,10 @@
   <body>
    <div class = 'container'>
     <header class = 'main-header'>
-
         <nav class = 'main-navigation'>
-          <ul>
+          <ul class = 'navigation'>
 
-            <li class = 'navigation-left main-information'><a href = '#'>Информация</a></li>
+            <li class = 'navigation-left'><a href = '#'>Информация</a></li>
             <li class = 'navigation-left'><a href = '#'>Фото и видео</a></li>
             <li class = 'navigation-right'><a href = '#'>Карта штата</a></li>
             <li class = 'navigation-right'><a href = '#'>Гостиницы</a></li>
@@ -137,7 +136,7 @@
 
 
         <div class = 'best-offer map'>
-          <form class = 'hotels' action= ' https://echo.htmlacademy.ru'  method = 'get' >
+          <form class = 'hotels-form' action= ' https://echo.htmlacademy.ru'  method = 'get' >
 
           <div class = 'formblock'>
             <label for = 'user-field-id-one'>Дата заезда:</label>
@@ -149,20 +148,24 @@
             <label for = 'user-field-id-two' >Дата Выезда:</label>
             <input id = 'user-field-id-two' type='text' name='time-of-checkout' placeholder= '4 июля 2016' required>
 
-            <a href = '#' class = 'date-checkout'></a>
+            <a href = '#' class = 'date-checkin'></a>
           </div>
 
-          <div class = 'formblock'>
+        <div class = 'formblock-max'>
+          <div class = 'formblock-mini'>
             <label for = 'for-adults'>Взрослые:</label>
-            <a href = '#' class = 'adultsbox-bth  minus'></a>
-            <input id = 'for-adults' type = 'text' class = 'adults'>2
-            <a href = '#' class = 'adultsbox-bth plus'></a>
+            <a href = '#' class = 'adultsbox-btn  minus'></a>
+            <input id = 'for-adults' type = 'text' class = 'adults' value = '2'>
+            <a href = '#' class = 'adultsbox-btn plus'></a>
           </div>
 
-          <div class = 'formblock'>
+          <div class = 'formblock-mini'>
             <label for = 'for-children'>Дети:</label>
-            <button id = 'for-children' type = 'submit'>0</button>
+            <a href = '#' class = 'childrenbox-btn  minus'></a>
+            <input id = 'for-children' type = 'text' class = 'adults' value = '0'>
+            <a href = '#' class = 'adultsbox-btn plus'></a>
           </div>
+           </div>
             <button type = 'submit' name = 'results'>Найти</button>
 
           </form>
