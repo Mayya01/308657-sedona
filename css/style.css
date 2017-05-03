@@ -28,6 +28,8 @@ h3{
   margin:0 auto;
  margin-top: -15px;
 }
+
+
 /*стили для header: index.html,catalog.html*/
 .main-header{
   position: relative;
@@ -50,7 +52,6 @@ h3{
   list-style-type: none;
   margin-top: 21px;
   width: 20%;
-  background-color: cadetblue;
 }
 .navigation-left{
   text-align: left;/*Почему не работает? Если убрать justify-content: space-around, то "Карта штата налезает на логотип"*/
@@ -59,11 +60,19 @@ h3{
   text-align: right;/*Почему не работает? Если убрать justify-content: space-around, то "Карта штата налезает на логотип"*/
 }
 
-.main-header li a {
+.main-header  a {
   text-decoration: none;
-  color: black;
   font-weight: bold;
+  color: black;
 }
+
+.main-information a:hover{
+  color: rgb(129, 179, 210);
+}
+.main-information a:active{
+  color: rgb(178, 178, 178);
+}
+
 
 .main-logo{
   background-image: url(../img/bc.png), url(../img/background%20photo.jpg);
@@ -78,6 +87,8 @@ h3{
   width:456px;
   height: 343px;
 }
+
+
 /*Стили к index.html, для блоков с рекламой*/
 .main-description{
   background-color: white;
@@ -139,6 +150,7 @@ h3{
   background-color: rgb(238,238,238);
 }
 
+/*Стили для блока с едой, жильем, подарками*/
 .features{
   display: flex;
   min-height: 330px;
@@ -320,6 +332,7 @@ button[name = 'results']:active{
   color: rgba(255,255,255, 0.3)
 }
 
+/*Спросить!!!*/
 .adultsbox-btn{
   display: block;
   vertical-align: top;
@@ -353,6 +366,7 @@ button[name = 'results']:active{
   min-height: 217px;
 }
 
+/*Спросить!!!Не доделан, потому что непотно где ошибка*/
 input[type='checkbox']{
   display: none;
 }
@@ -382,9 +396,12 @@ input[type='checkbox']:checked + label::after{
   top: 0;
   left: 0;
 }
+
 label{
    margin-left: 20px;
 }
+
+/*Блок с сортировкой*/
 .options p{
   text-align: center;
   padding-top: 30px;
@@ -431,34 +448,47 @@ label{
   border: none;
 }
 .sort-guide{
+  background-image: url(../img/sprite2.png);
+  display: block;
+}
+.notactive-guide{
   width: 11px;
   height: 10px;
+  background-position: -10px -984px;
   position: absolute;
+  top: 40px;
+  right: 96px;
 }
 .active-guide{
-  background-image: url(../img/triangle6.png);
-  background-repeat: no-repeat;
+  position: absolute;
   top: 39px;
-  right:73px;
+  right: 73px;
 }
-.sort-guide:first-child{
-  background-image: url(../img/triangle1.png);
-  background-repeat: no-repeat;
-  top: 40px;
-  right:96px;
-}
-.sort-guide:hover{
-  background-image: url(../img/triangle2.png);
+.notactive-guide:hover{
+  width: 11px;
+  height: 10px;
+  background-position: -10px -1014px;
 }
 .active-guide:hover{
-  background-image: url(../img/triangle5.png);
+  width: 11px;
+  height: 10px;
+  background-position: -10px -1134px;
 }
-.sort-guide:active{
-  background-image: url(../img/triangle3.png);
+.notactive-guide:active{
+  width: 11px;
+  height: 10px;
+  background-position: -10px -1074px;
 }
-.active-guide:active{
-  background-image: url(../img/triangle6.png);
+.active-guide, .active-guide:active{
+  width: 11px;
+  height: 10px;
+  background-position: -10px -1164px;
 }
+
+
+
+
+/*Блок с отелями:картинки, название, цена и т.д.*/
 .items{
   display: flex;
   flex-direction: column;
@@ -485,6 +515,7 @@ label{
   margin-top: 0;
   padding-top: 28px;
   min-height: 32px;
+  cursor: pointer;
 }
 .items h2:hover{
   color: rgb(129, 179, 210);
@@ -555,6 +586,8 @@ label{
   width: 544px;
 }
 
+
+ /*Стили для рейтинга, звездочек*/
 .amara-information,
 .quail-information,
 .poco-information{
@@ -590,6 +623,10 @@ label{
 .poco-information .raitning-image{
   width: 42px;
 }
+
+
+
+
 /*Стили для футера*/
 .main-footer{
   display: flex;
@@ -640,6 +677,16 @@ label{
   top: 41px;
   right: 103px;
 }
+.copyright-logo:hover{
+  width: 113px;
+  height: 39px;
+  background-position: -10px -69px;
+}
+.copyright-logo:active{
+  width: 113px;
+  height: 39px;
+  background-position: -10px -128px;
+}
 
 .social-btn:active{
   background-color: rgb(84,150,189);
@@ -668,12 +715,14 @@ label{
   height: 16px;
   background-position: -10px -1194px;
 }
+
+
 /*Стили для ползунка, демо*/
 .filter-range {
   width: 330px;
   color: #ffffff;
   text-transform: uppercase;
-  position: absolute;/*Нужно ли здесь позиционирование? В Демо его не было. Относительное позиционирование задано у блока .optionsстрока 341*/
+  position: absolute;/*Нужно ли здесь позиционирование? В Демо его не было. Относительное позиционирование задано у блока .options строка 341*/
   top: 26px;
   right: 74px;
 }
@@ -694,7 +743,6 @@ label{
   border: 2px solid #ffffff;
   border-radius: 2px;
 }
-
 .price-controls::after {
   content: "";
   position: absolute;
