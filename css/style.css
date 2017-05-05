@@ -91,11 +91,16 @@ h3{
   width:456px;
   height: 343px;
 }
+.navigation .active-navigation{
+  color: rgb(119, 99, 87);
+}
+
+
 
 
 /*Стили к index.html, для блоков с рекламой*/
 .main-description{
-  background-color:  #ffffff;;
+  background-color:  #ffffff;
   width: 1200px;
   min-height: 210px;
 }
@@ -127,7 +132,7 @@ h3{
 }
 .advertising-content{
   min-height: 166px;
-  width: 307;
+  width: 307px;
   color:  #ffffff;;
   margin:50px 46px 40px 46px;
 }
@@ -153,6 +158,8 @@ h3{
 .advertising-tourist{
   background-color: rgb(238,238,238);
 }
+
+
 
 /*Стили для блока с едой, жильем, подарками*/
 .features{
@@ -202,6 +209,8 @@ h3{
    white-space: pre-wrap;
 }
 
+
+
 /*Стили к index.html:форма, блок поверх формы, карта*/
 .map{
   background-image: url(../img/map.jpg)
@@ -212,7 +221,7 @@ h3{
   min-height: 766px;
 }
 .best-offer-interest{
-  background-color: white;
+  background-color: #ffffff;
 }
 .best-offer-options h2{
   margin-top: 0px;
@@ -240,7 +249,7 @@ h3{
   margin-right: 316px;
 }
 .best-offer-hotels a{
-  color:white;
+  color:#ffffff;
   text-decoration: none;
   text-align: center;
   display: block;
@@ -266,6 +275,7 @@ h3{
   background-color: rgb(242,242,242);
   border:none;
   font-weight: bold;
+  padding: 7px 229px 7px 12px;
 }
 input[type='text']:hover{
   background-color: rgb(235,235,235);
@@ -318,7 +328,6 @@ button[name = 'results']:active{
   background-color: rgb(84,150,189);
   color: rgba(255,255,255, 0.3)
 }
-
 .formblock-max{
   display: flex;
 }
@@ -374,12 +383,16 @@ label[for = 'for-children']{
   background-position: 0 -725px;
 }
 
+
+/*для catalog.html, стили для чекбоксов, ползунка*/
+
 .options{
   width: 1200px;
   display: flex;
   position: relative;
   background-image: url(../img/filterbackground.jpg);
   color: #ffffff;
+  margin-top: 10px;
 }
 .options p{
   margin: 0;
@@ -501,13 +514,121 @@ input[type='checkbox']:checked + label::before{
   background-position: -10px -1164px;
 }
 
+/*Стили для ползунка, демо*/
+.filter-range {
+  box-sizing: content-box;
+  width: 330px;
+  color: #ffffff;
+  text-transform: uppercase;
+  position: absolute;/*Нужно ли здесь позиционирование? В Демо его не было. Относительное позиционирование задано у блока .options*/
+  top: 31px;
+  right: 74px;
+}
+.filter-range-title {
+  margin-bottom: 9px;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+}
+.price-controls {
+  position: relative;
+  height: 36px;
+  margin-bottom: 20px;
+  font-size: 0;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+.price-controls label {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+  cursor: pointer;
+}
+.price-controls .min-price,
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 65px;
+}
+.price-controls input {
+  width: 50px;
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+.range-controls {
+  position: relative;
+  margin-bottom: 32px;
+}
+.range-controls .scale {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.3);
+}
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+  background: #ffffff;
+}
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+.range-toggle-max {
+  left: 80%;
+}
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
+}
+
 
 
 
 /*Блок с отелями:картинки, название, цена и т.д.*/
 .items{
-  display: flex;
-  flex-direction: column;
   background-color:  #ffffff;;
 }
 .items-amara,
@@ -515,10 +636,6 @@ input[type='checkbox']:checked + label::before{
 .items-poco{
   display: flex;
   min-height: 150px;
-}
-.items-amara,
-.items-quail,
-.items-poco{
   border-bottom: 1px solid rgb(229,229,229);
 }
 .items-amara{
@@ -529,6 +646,7 @@ input[type='checkbox']:checked + label::before{
 }
 .items h2{
   margin-top: 0;
+  margin-bottom: 0;
   padding-top: 28px;
   min-height: 32px;
   cursor: pointer;
@@ -539,34 +657,46 @@ input[type='checkbox']:checked + label::before{
 .items h2:active{
   color: rgb(202, 202, 202);
 }
-
-.amara-description p, .amara-description a,
-.quail-description p, .quail-description a,
-.poco-description p, .poco-description a{
-  display: inline-block;
-  width: 200px;
+.hotels{
+  display: flex;
 }
-.amara-description p,
-.quail-description p,
-.poco-description {
-  margin-top: -10px;/*????*/
-}
-.amara-book,.amara-details,
-.quail-details, .quail-book,
-.poco-details, .poco-book {
-  min-height:27px;
+.hotels a{
   text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
   text-align: center;
-  padding-top: 5px;
-  color:  #ffffff;;
-  margin-top: -20px;/*????*/
+  height: 27px;
+}
+.hotels p{
+  display: inline-block;
+  margin-top: 0;
+  padding-top: 11px;
+}
+.amara p:last-child{
+  margin-left: 37px;
+}
+.quail p:last-child{
+  margin-left: 63px;
+}
+.poco p:last-child{
+  margin-left: 20px;
 }
 .amara-details,
 .quail-details,
 .poco-details{
   width: 110px;
   background-color: rgb(129, 179, 210);
+  padding: 5px 16px 4px 16px;
 }
+.amara-book,
+.quail-book,
+.poco-book{
+  width: 142px;
+  background-color: rgb(118, 99, 87);
+  margin-left: 6px;
+  padding: 5px 16px 6px 16px;
+}
+
 .amara-details:hover,
 .quail-details:hover,
 .poco-details:hover{
@@ -576,13 +706,7 @@ input[type='checkbox']:checked + label::before{
 .quail-details:active,
 .poco-details:active{
   background-color: rgb(84, 150, 189);
-  color: rgba(255,255,255, 0.3)
-}
-.amara-book,
-.quail-book,
-.poco-book{
-  width: 142px;
-  background-color: rgb(118, 99, 87);
+  color: rgba(255,255,255, 0.3);
 }
 .amara-book:hover,
 .quail-book:hover,
@@ -596,12 +720,6 @@ input[type='checkbox']:checked + label::before{
   background-color: rgb(80, 62, 51);
 }
 
-.amara-description,
-.quail-description,
-.poco-description{
-  width: 544px;
-}
-
 
  /*Стили для рейтинга, звездочек*/
 .amara-information,
@@ -611,28 +729,25 @@ input[type='checkbox']:checked + label::before{
   width: 728px;
   position: relative;
 }
-.amara-rating,
-.poco-raitnig,
-.quail-raitnig{
+.amara-rating, .quail-raitnig, .poco-raitnig{
   width: 110px;
-  min-height: 27px;
+  height: 27px;
   background-color: rgb(242, 242, 242);
-  text-align: center;
-  padding-top: 4px;
-  margin-top: 93px;
-  margin-right: 73px;/*??Не работает??*/
-  position: absolute;/*Нужно ли?*/
-  right: 73px;/*Нужно ли?*/
+  color: rgb(139, 139, 139);
+  padding: 2px 12px 7px 15px;
+  position: absolute;
+  top: 93px;
+  right: 73px;/*Не забыть вопрос про margin!!!*/
 }
 .raitning-image{
-  margin-top: 29px;
+  background-image: url(../img/stars.png);
   width: 89px;
   height: 17px;
-  background-image: url(../img/stars.png);
-  margin-right: 73px;/*Не работает?*/
   position: absolute;
+  top: 29px;
   right: 73px;
 }
+
 .quail-information .raitning-image{
   width: 65px;
 }
@@ -742,129 +857,6 @@ input[type='checkbox']:checked + label::before{
 }
 
 
-/*Стили для ползунка, демо*/
-.filter-range {
-  width: 330px;
-  color: #ffffff;
-  text-transform: uppercase;
-  position: absolute;/*Нужно ли здесь позиционирование? В Демо его не было. Относительное позиционирование задано у блока .options строка 341*/
-  top: 26px;
-  right: 74px;
-}
-
-.filter-range-title {
-  margin-bottom: 9px;
-
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 21px;
-}
-
-.price-controls {
-  position: relative;
-  height: 36px;
-  margin-bottom: 20px;
-  font-size: 0;
-  border: 2px solid #ffffff;
-  border-radius: 2px;
-}
-.price-controls::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  width: 2px;
-  height: 22px;
-
-  background: #ffffff;
-  transform: translate(-50%, -50%);
-}
-
-.price-controls label {
-  display: inline-block;
-  font-size: 14px;
-  line-height: 38px;
-  vertical-align: top;
-  cursor: pointer;
-}
-
-.price-controls .min-price,
-.price-controls .max-price {
-  width: 90px;
-  padding-left: 65px;
-}
-
-.price-controls input {
-  width: 50px;
-  margin-right: 20px;
-
-  color: inherit;
-  font: inherit;
-
-  background: none;
-  border: none;
-}
-
-.range-controls {
-  position: relative;
-  margin-bottom: 32px;
-}
-
-.range-controls .scale {
-  height: 2px;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.range-controls .bar {
-  width: 80%;
-  height: 2px;
-  background: #ffffff;
-}
-
-.range-toggle {
-  position: absolute;
-  top: -9px;
-  width: 4px;
-  height: 4px;
-  background: #ababab;
-  border: 8px solid #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
-  cursor: pointer;
-}
-
-.range-toggle:hover {
-  background: #1c4f80;
-}
-
-.range-toggle-min {
-  left: 0;
-}
-
-.range-toggle-max {
-  left: 80%;
-}
-
-.btn-transparent {
-  display: block;
-  margin: 0 auto;
-  padding: 6px 35px;
-  font-size: 14px;
-  line-height: 20px;
-  color: #ffffff;
-  text-transform: uppercase;
-  background: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 2px;
-  cursor: pointer;
-}
-
-.btn-transparent:hover {
-  color: #000000;
-
-  background: #ffffff;
-}
 
 
 
