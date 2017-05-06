@@ -27,7 +27,12 @@ h3{
   width:1200px;
   margin:0 auto;
   margin-top: -15px;
+  box-shadow: 5px 0 20px rgba(0, 0, 0, .05),
+              -5px 0 20px rgba(0, 0, 0, .05);
 }
+
+
+
 
 
 /*стили для header: index.html,catalog.html*/
@@ -40,7 +45,7 @@ h3{
 .main-header img{
   position: absolute;
   top:0;
-  left: 560px;
+  left: 531px;
   z-index: 10;
 }
 .main-navigation ul{
@@ -57,8 +62,17 @@ h3{
 }
 .main-header li{
   list-style-type: none;
-  margin-top: 21px;
+  margin-top: 18px;
   width: 20%;
+}
+.main-header li:nth-child(2) {
+  margin-left: -15px;
+  margin-top: 19px
+}
+.main-header li:nth-child(3){
+  margin-right: -15px;
+  margin-top: 19px;
+
 }
 .navigation-left{
   text-align: left;
@@ -72,10 +86,10 @@ h3{
   font-weight: bold;
   color: black;
 }
-.main-navigation a:hover{
+.notactive-navigation:hover{
   color: rgb(129, 179, 210);
 }
-.main-navigation a:active{
+.notactive-navigation:active{
   color: rgb(178, 178, 178);
 }
 .main-logo{
@@ -106,9 +120,8 @@ h3{
 }
 .main-description h1{
   text-align: center;
-  white-space: pre-wrap;
   margin-top:0;
-  padding:60px 282px 34px 282px;
+  padding:60px 300px 34px 300px;
 }
 .main-description h3{
   text-align: center;
@@ -142,6 +155,8 @@ h3{
 }
 .advertising-content p:first-child{
   font-size: 21px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 .advertising-area p,
 .advertising-road p,
@@ -181,7 +196,7 @@ h3{
   display: block;
   background-image: url(../img/sprite2.png);
 }
-.accomodation-link{
+.accomodation-pictures{
   width: 75px;
   height: 72px;
   background-position: -10px -358px;
@@ -189,7 +204,7 @@ h3{
   top: 60px;
   left: 162px;
 }
-.food-link{
+.food-pictures{
   width: 74px;
   height: 70px;
   background-position: -10px -268px;
@@ -197,7 +212,7 @@ h3{
   top: 60px;
   left: 560px;
 }
-.presents-link{
+.presents-pictures{
   width: 64px;
   height: 76px;
   background-position: -10px -769px;
@@ -206,7 +221,8 @@ h3{
   right: 170px;
 }
 .samewrap{
-   white-space: pre-wrap;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 
@@ -238,7 +254,6 @@ h3{
 }
 .best-offer-options p{
   text-align: center;
-  white-space: pre-wrap;
   padding-top: 31px;
 }
 .best-offer-hotels{
@@ -262,7 +277,9 @@ h3{
   margin-left: 316px;
   margin-right: 316px;
   padding: 55px;
+  box-shadow: 7px 7px 15px rgba(0, 0, 0, .15);
 }
+
 .hotels-form label{
   width: 112px;
   display: block;
@@ -276,11 +293,14 @@ h3{
   border:none;
   font-weight: bold;
   padding: 7px 229px 7px 12px;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
 }
-input[type='text']:hover{
+ .formblock input[type='text']:hover{
   background-color: rgb(235,235,235);
 }
-input[type='text']:focus{
+ .formblock input[type='text']:focus{
   background-color: transparent;
   outline: 2px solid rgb(242,242,242);
 }
@@ -389,10 +409,8 @@ label[for = 'for-children']{
 .options{
   width: 1200px;
   display: flex;
-  position: relative;
   background-image: url(../img/filterbackground.jpg);
   color: #ffffff;
-  margin-top: 10px;
 }
 .options p{
   margin: 0;
@@ -498,11 +516,6 @@ input[type='checkbox']:checked + label::before{
   height: 10px;
   background-position: -10px -1014px;
 }
-.active-guide:hover{
-  width: 11px;
-  height: 10px;
-  background-position: -10px -1134px;
-}
 .notactive-guide:active{
   width: 11px;
   height: 10px;
@@ -520,9 +533,9 @@ input[type='checkbox']:checked + label::before{
   width: 330px;
   color: #ffffff;
   text-transform: uppercase;
-  position: absolute;/*Нужно ли здесь позиционирование? В Демо его не было. Относительное позиционирование задано у блока .options*/
-  top: 31px;
-  right: 74px;
+  margin-left: auto;
+  padding-top: 29px;
+  padding-right: 74px;
 }
 .filter-range-title {
   margin-bottom: 9px;
@@ -726,8 +739,12 @@ input[type='checkbox']:checked + label::before{
 .quail-information,
 .poco-information{
   min-height: 152px;
-  width: 728px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  padding-top:29px;
+  padding-right: 72px;
+  align-items: flex-end;
 }
 .amara-rating, .quail-raitnig, .poco-raitnig{
   width: 110px;
@@ -735,17 +752,12 @@ input[type='checkbox']:checked + label::before{
   background-color: rgb(242, 242, 242);
   color: rgb(139, 139, 139);
   padding: 2px 12px 7px 15px;
-  position: absolute;
-  top: 93px;
-  right: 73px;/*Не забыть вопрос про margin!!!*/
 }
 .raitning-image{
   background-image: url(../img/stars.png);
   width: 89px;
   height: 17px;
-  position: absolute;
-  top: 29px;
-  right: 73px;
+  margin-bottom: 47px;
 }
 
 .quail-information .raitning-image{
@@ -779,6 +791,8 @@ input[type='checkbox']:checked + label::before{
   color: black;
   font-weight: bold;
   text-decoration: none;
+  font-size: 21px;
+  font-family: 'PT Sans', 'Arial', sans-serif;
 }
 .footer-hastag, .footer-social{
   width: 400px;
