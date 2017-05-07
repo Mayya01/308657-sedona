@@ -425,19 +425,24 @@ label[for = 'for-children']{
 }
 .options p{
   margin: 0;
-  padding-top: 29px;
-  padding-left: 71px;/*Спросить*/
+  margin-top: 27px;
+  margin-left: 74px;
+  font-size: 16px;
+  font-weight: bold;
 
 }
 .options-checkbox{
   width:250px;
-  min-height: 217px;
+  min-height: 146px;
   padding-left: 71px;
 }
-.options-checkbox label{
-  padding-top: 28px;
-  padding-left: 40px;
-  padding-bottom: 28px;
+.options-checkbox label {
+  padding-left: 44px;
+  margin-bottom: 26px;
+  margin-left: 5px;
+}
+label[for="swimming-pool"], label[for="hotels"] {
+    margin-top: 25px;
 }
 
 .options input[type='checkbox']{
@@ -454,7 +459,7 @@ input[type='checkbox'] + label::before{
   width: 24px;
   height: 22px;
   position: absolute;
-  top: 25px;
+  top: 0;
   left: 0;
   background-image: url(../img/sprite2.png);
   background-position: -10px -865px;
@@ -541,24 +546,23 @@ input[type='checkbox']:checked + label::before{
 /*Стили для ползунка, демо*/
 .filter-range {
   box-sizing: content-box;
-  width: 330px;
+  width: 316px;
   color: #ffffff;
   text-transform: uppercase;
   margin-left: auto;
-  padding-top: 29px;
+  padding-top: 26px;
   padding-right: 74px;
 }
 .filter-range-title {
-  margin-bottom: 9px;
-
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 21px;
+  margin-bottom: 8px;
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
 }
 .price-controls {
   position: relative;
-  height: 36px;
-  margin-bottom: 20px;
+  height: 34px;
+  margin-bottom: 19px;
   font-size: 0;
   border: 2px solid #ffffff;
   border-radius: 2px;
@@ -630,8 +634,7 @@ input[type='checkbox']:checked + label::before{
 }
 .btn-transparent {
   display: block;
-  margin: 0 auto;
-  padding: 6px 35px;
+  padding: 6px 34px;
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
@@ -640,6 +643,7 @@ input[type='checkbox']:checked + label::before{
   border: 2px solid #ffffff;
   border-radius: 2px;
   cursor: pointer;
+  margin-left: 85px
 }
 
 .btn-transparent:hover {
@@ -873,6 +877,11 @@ input[type='checkbox']:checked + label::before{
   width: 17px;
   height: 15px;
   background-position: -10px -949px;
+}
+.social-btn-tv:active::before,
+.social-btn-fb:active::before,
+.social-btn-you:active::before{
+  opacity: 0.8;
 }
 .social-btn-fb::before{
   width: 10px;
