@@ -162,13 +162,18 @@ h3{
 .advertising-content p:nth-child(2){
   padding-top: 8px;
 }
-.advertising-content p:nth-child(3) {
+.advertising-paragraph{
     padding: 8px;
 }
 .third .advertising-content {
   color: black;
   background-color: rgb(238, 238, 238);
 }
+.third .advertising-paragraph{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 
 
 
@@ -235,7 +240,7 @@ h3{
 .best-offer{
   display: flex;
   flex-direction: column;
-  min-height: 766px;
+  min-height: 593px;
 }
 .best-offer-interest{
   background-color: #ffffff;
@@ -243,23 +248,25 @@ h3{
 .best-offer-options h2{
   margin-top: 0px;
   text-align: center;
-  padding-left: 30px;
+  padding-left: 2px;
   font-size: 30px;
+  font-weight: bold;
+
 }
 .best-offer-options{
   width: 634px;
   margin-left: 282px;
   margin-right: 282px;
-  margin-top: 56px;
+  margin-top: 54px;
   min-height: 147px;
 }
 .best-offer-options p{
   text-align: center;
-  padding-top: 31px;
+  line-height: 1.7em;
 }
 .best-offer-hotels{
   width: 567px;
-  min-height: 87px;
+  min-height: 88px;
   background-color: rgb(118,99,87);
   margin-left: 316px;
   margin-right: 316px;
@@ -269,7 +276,9 @@ h3{
   text-decoration: none;
   text-align: center;
   display: block;
-  padding: 33px 22px;
+  padding-top: 36px;
+  font-weight: bold;
+  font-size: 21px;
 }
 .hotels-form{
   width: 568px;
@@ -285,11 +294,12 @@ h3{
   width: 112px;
   display: block;
   font-weight: bold;
-  padding-top: 10px;
+  padding-top: 8px;
+  padding-left: 1px;
 }
 .formblock input[type='text']{
   width:346px;
-  height: 40px;
+  height: 38px;
   background-color: rgb(242,242,242);
   border:none;
   font-weight: bold;
@@ -320,7 +330,7 @@ h3{
   background-position: -10px -450px;
 }
 .date-checkin{
-  top: 10px;
+  top: 8px;
   right: 10px;
 }
 .date-checkin:hover {
@@ -371,17 +381,17 @@ button[name = 'results']:active{
   height: 38px;
   background-color: rgb(242,242,242);
   border:none;
-  font-weight: bold;
   padding-left: 40px;
-  padding-right: 40px;
+  padding-right: 42px;
   text-align: center;
+  padding-bottom: 7px;
 }
 label[for = 'for-children']{
   padding-left: 51px;
 }
 .minus{
   top: 0;
-  right: 78px;
+  right: 75px;
   width: 12px;
   height: 3px;
   background-position: 0 -560px;
@@ -808,8 +818,8 @@ input[type='checkbox']:checked + label::before{
   display: block;
   text-decoration: none;
   position: absolute;
-  top: 53px;
-  right: 224px;
+  top: 50px;
+  right: 223px;
   color: black;
 }
 
@@ -836,11 +846,12 @@ input[type='checkbox']:checked + label::before{
 .social-btn{
   display: inline-block;
   vertical-align: top;
-  width: 43px;
-  height: 43px;
+  width: 46px;
+  height: 48px;
   font-size: 0;
   background-color: rgb(129,179,210);
   position: relative;
+  margin-top: 2px;
 }
 
 .social-btn:active{
@@ -854,6 +865,9 @@ input[type='checkbox']:checked + label::before{
   transform: translate(-50%, -50%);
   background-image: url(../img/sprite2.png);
   background-repeat: no-repeat;
+}
+.social-btn-tv {
+  margin-left: 40px;
 }
 .social-btn-tv::before{
   width: 17px;
