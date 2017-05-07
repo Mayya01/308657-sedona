@@ -40,7 +40,6 @@ h3{
   position: relative;
   background-color:  #ffffff;;
   min-height: 57px;
-  margin-bottom: -14px;
 }
 .main-header img{
   position: absolute;
@@ -96,14 +95,9 @@ h3{
   background-image: url(../img/bc.png), url(../img/background%20photo.jpg);
   text-align: center;
   background-repeat: no-repeat;
-  background-position: 0 bottom, 50% 0;
-  padding-top:50px;
-  padding-bottom: 50px;
-
-}
-.logo-image {
-  width:456px;
-  height: 343px;
+  background-position: 0 bottom, 50% -55px;
+  padding-top: 75px;
+  height: 510px;
 }
 .navigation .active-navigation{
   color: rgb(119, 99, 87);
@@ -116,12 +110,13 @@ h3{
 .main-description{
   background-color:  #ffffff;
   width: 1200px;
-  min-height: 210px;
+  min-height: 216px;
 }
 .main-description h1{
   text-align: center;
   margin-top:0;
-  padding:60px 300px 34px 300px;
+  padding:60px 300px 22px 300px;
+  line-height: 1.2em;
 }
 .main-description h3{
   text-align: center;
@@ -138,16 +133,22 @@ h3{
 .items-second:nth-child(1){
   width:800px;
   background-image: url(../img/backgroundimage2.jpg);
+  background-position: 0px -77px;
+
 }
  .items-first:nth-child(2){
   background-image: url(../img/backgroundimage1.jpg);
   width:800px;
+  background-position: 0 -80px;
 }
+
+
 .advertising-content{
-  min-height: 166px;
-  width: 307px;
+  background-color: rgb(129,179,210);
+  min-height: 256px;
+  width: 400px;
   color:  #ffffff;;
-  margin:50px 46px 40px 46px;
+  padding: 29px 40px 40px 40px;
 }
 .advertising-content p{
   text-align: center;
@@ -155,23 +156,18 @@ h3{
 }
 .advertising-content p:first-child{
   font-size: 21px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 70px;
+  padding-right: 70px;
 }
-.advertising-area p,
-.advertising-road p,
-.advertising-tourist p{
+.advertising-content p:nth-child(2){
+  padding-top: 8px;
+}
+.advertising-content p:nth-child(3) {
+    padding: 8px;
+}
+.third .advertising-content {
   color: black;
-}
-.advertising-area p:nth-child(1),
-.advertising-road p:nth-child(1),
-.advertising-tourist p:nth-child(1){
-  font-weight: bold;
-}
-.advertising-area,
-.advertising-road,
-.advertising-tourist{
-  background-color: rgb(238,238,238);
+  background-color: rgb(238, 238, 238);
 }
 
 
@@ -186,17 +182,14 @@ h3{
   width: 400px;
   padding-top: 164px;
   text-align: center;
-  background-color:  #ffffff;;
+  background-color:  #ffffff;
 }
-.accomodation, .food, .presents{
-  font-weight: bold;
-  font-size: 21px;
-}
-.features-image{
-  display: block;
+.features-details::after{
   background-image: url(../img/sprite2.png);
+  background-repeat:feati no-repeat;
 }
-.accomodation-pictures{
+.features-accomodation::after{
+  content: '';
   width: 75px;
   height: 72px;
   background-position: -10px -358px;
@@ -204,7 +197,13 @@ h3{
   top: 60px;
   left: 162px;
 }
-.food-pictures{
+.accomodation, .food, .presents{
+  font-weight: bold;
+  font-size: 21px;
+  margin-top: -2px;
+}
+.features-food::after{
+  content: '';
   width: 74px;
   height: 70px;
   background-position: -10px -268px;
@@ -212,17 +211,19 @@ h3{
   top: 60px;
   left: 560px;
 }
-.presents-pictures{
+.features-presents::after{
+  content: '';
   width: 64px;
   height: 76px;
-  background-position: -10px -769px;
+  background-position: -7px -771px;
   position: absolute;
-  bottom: 200px;
+  top: 60px;
   right: 170px;
 }
 .samewrap{
   padding-left: 50px;
   padding-right: 50px;
+  padding-top: 5px;
 }
 
 
