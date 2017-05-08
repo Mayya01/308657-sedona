@@ -261,6 +261,7 @@ h3{
 }
 .best-offer-interest{
   background-color: #ffffff;
+  min-height: 290px;
 }
 .best-offer-options h2{
   margin-top: 0px;
@@ -276,6 +277,7 @@ h3{
   margin-right: 282px;
   margin-top: 54px;
   min-height: 135px;
+  padding-bottom: 33px
 }
 .best-offer-options p{
   text-align: center;
@@ -449,6 +451,7 @@ label[for = 'for-children']{
   display: flex;
   background-image: url(../img/filterbackground.jpg);
   color: #ffffff;
+  min-height: 217px;
 }
 .options p{
   margin: 0;
@@ -462,7 +465,6 @@ label[for = 'for-children']{
 }
 .options-checkbox{
   width: 250px;
-  min-height: 120px;
   padding-left: 69px;
 }
 .options-features label {
@@ -603,7 +605,7 @@ input[type='checkbox']:checked + label::before{
   padding-right: 74px;
 }
 .filter-range-title {
-  margin-bottom: 8px;
+  margin-bottom: 9px;
   font-weight: 600;
   font-size: 16px;
   line-height: 21px;
@@ -691,7 +693,6 @@ input[type='checkbox']:checked + label::before{
 }
 .btn-transparent {
   display: block;
-  padding: 6px 30px;
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
@@ -700,7 +701,9 @@ input[type='checkbox']:checked + label::before{
   border: 2px solid #ffffff;
   border-radius: 2px;
   cursor: pointer;
-  margin-left: 85px
+  margin-left: 85px;
+  min-width: 120px;
+  min-height: 31px;
 }
 
 .btn-transparent:hover {
