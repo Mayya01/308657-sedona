@@ -866,7 +866,7 @@ input[type='checkbox']:checked + label::before{
   position: relative;
   margin-top: -121px;
 }
-#noopacity{
+.noopacity{
   background-color: rgb(255,255,255);
   margin-top:0;
 }
