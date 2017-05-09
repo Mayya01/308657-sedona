@@ -11,7 +11,7 @@ html {
 body{
   font-family: 'PT Sans', 'Arial', sans-serif;
   font-size:14px;
-  line-height: 1.3em;
+  line-height: 21px;
   text-transform: uppercase;
   background-color: rgb(242,242,242);
   margin-top: 0;
@@ -308,6 +308,11 @@ h3{
   padding: 55px;
   -webkit-box-shadow: 7px 7px 15px rgba(0, 0, 0, .15);
           box-shadow: 7px 7px 15px rgba(0, 0, 0, .15);
+  display: none;
+}
+.visible{
+  display: block;
+  animation: bounce 0.6s;
 }
 
 .hotels-form label{
@@ -411,7 +416,11 @@ button[name = 'results']:active{
   padding-left: 40px;
   padding-right: 42px;
   text-align: center;
-  padding-bottom: 7px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1em;
+  font-family: 'PT Sans', 'Arial', sans-serif;
+
 }
 label[for = 'for-children']{
   padding-left: 51px;
@@ -506,8 +515,9 @@ input[type='checkbox'] + label::before{
 input[type='checkbox']:checked + label::before{
   background-position: -10px -187px;
 }
-.filter-range input[value="0"], .filter-range input[value="3000"] {
+.filter-range input[value], .filter-range input[value] {
     padding-left: 2px;
+    line-height: 16px;
 }
 
 /*Блок с сортировкой*/
@@ -618,6 +628,7 @@ input[type='checkbox']:checked + label::before{
   font-size: 0;
   border: 2px solid #ffffff;
   border-radius: 2px;
+  line-height: 16px;
 }
 .price-controls::after {
   content: "";
@@ -866,7 +877,7 @@ input[type='checkbox']:checked + label::before{
   position: relative;
   margin-top: -121px;
 }
-.noopacity{
+ .noopacity{
   background-color: rgb(255,255,255);
   margin-top:0;
 }
@@ -971,6 +982,20 @@ input[type='checkbox']:checked + label::before{
   height: 16px;
   background-position: -10px -1194px;
 }
+.visible{
+  display: block;
+  animation: bounce 1.5s;
+}
+
+@keyframes bounce {
+  0%   {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
 
 
