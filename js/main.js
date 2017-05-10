@@ -5,7 +5,6 @@
   var dateOfCheckIn  = hotelsForm.querySelector('input[name=time-of-checkin]');
   var dateOfCheckOut = hotelsForm.querySelector('input[name=time-of-checkout]');
   var button = hotelsForm.querySelector('button[name = results]');
-    var iframe = document.querySelector('iframe');
 
 
    hotelsLink.addEventListener('click', function(evt){
