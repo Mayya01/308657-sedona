@@ -246,6 +246,7 @@ h3 {
     -ms-flex-direction: column;
     flex-direction: column;
     min-height: 593px;
+    position: relative;
 }
 .best-offer-interest {
     background-color: #ffffff;
@@ -297,6 +298,8 @@ h3 {
     -webkit-box-shadow: 7px 7px 15px rgba(0, 0, 0, .15);
     box-shadow: 7px 7px 15px rgba(0, 0, 0, .15);
     display: none;
+    position: absolute;
+    top: 0;
 }
 .visible {
     display: block;
@@ -407,7 +410,7 @@ button[name 'results']:active {
     line-height: 26px;
     font-family: 'PT Sans', 'Arial', sans-serif;
 }
-label[for 'for-children'] {
+label[for ='for-children'] {
     padding-left: 51px;
 }
 .minus {
@@ -464,6 +467,9 @@ label[for 'for-children'] {
 }
 .options-accomodation label {
     padding-left: 45px;
+}
+.options-accomodation label, .options-features label{
+    cursor: pointer;
 }
 .options-accomodation label,
 .options-features label {
@@ -742,6 +748,7 @@ input[type='checkbox']:checked + label::before {
     font-weight: bold;
     text-align: center;
     height: 27px;
+    display: block;
 }
 .hotels p {
     display: inline-block;
@@ -762,7 +769,7 @@ input[type='checkbox']:checked + label::before {
 .poco-details {
     width: 110px;
     background-color: rgb(129, 179, 210);
-    padding: 4px 16px 4px 16px;
+    padding-top: 4px;
 }
 .amara-book,
 .quail-book,
@@ -770,7 +777,7 @@ input[type='checkbox']:checked + label::before {
     width: 142px;
     background-color: rgb(118, 99, 87);
     margin-left: 6px;
-    padding: 4px 16px 6px 16px;
+    padding-top: 4px;
 }
 .amara-details:hover,
 .quail-details:hover,
@@ -854,8 +861,8 @@ input[type='checkbox']:checked + label::before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: 132px;
-    margin-top: 50px;
+    padding-left: 132px;
+    padding-top: 50px;
 }
 .footer-hastag a {
     color: #000000;
@@ -865,14 +872,14 @@ input[type='checkbox']:checked + label::before {
     font-family: 'PT Sans', 'Arial', sans-serif;
 }
 .footer-hastag,
-.footer-social {
-    width: 400px;
-}
-.footer-copyright {
+.footer-social,
+.footer-copyright{
     width: 400px;
 }
 .footer-social {
-    margin-top: 37px;
+    text-align: center;
+    padding-top: 35px;
+    padding-right: 37px;
 }
 .copyright-sign {
     display: block;
@@ -910,6 +917,9 @@ input[type='checkbox']:checked + label::before {
     font-size: 0;
     background-color: rgb(129, 179, 210);
     position: relative;
+}
+.social-btn:hover{
+    background-color: rgb(102, 158, 192);
 }
 .social-btn:active {
     background-color: rgb(84, 150, 189);
@@ -956,14 +966,19 @@ input[type='checkbox']:checked + label::before {
 .map {
     background-image: url(../img/map.jpg);
 }
-iframe{
-  position: relative;
-  animation:  appearance 2s;
-}
 .visible {
   display: block;
-  animation: appearance 1s;
-  position: absolute;
+  -webkit-animation: appearance 1s;
+          animation: appearance 1s;
+
+}
+@-webkit-keyframes appearance {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 @keyframes appearance {
     0% {
@@ -975,22 +990,41 @@ iframe{
 }
 
 .error {
-  animation-name: shake;
-  animation-duration: 0.5s;
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
 }
 
 @keyframes shake {
   0%, 100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-5px);
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
   }
   20%, 40%, 60%, 80% {
-    transform: translateX(5px);
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
   }
 }
-
 
 
 
