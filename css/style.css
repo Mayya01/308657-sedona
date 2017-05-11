@@ -369,11 +369,11 @@ button[name = 'results'] {
     padding: 17px 195px;
     font-family: 'PT Sans', 'Arial', sans-serif;
 }
-button[name 'results']:hover,
+button[name = 'results']:hover,
 .social-btn:hover {
     background-color: rgb(102, 158, 192);
 }
-button[name 'results']:active {
+button[name = 'results']:active {
     background-color: rgb(84, 150, 189);
     color: rgba(255, 255, 255, 0.3)
 }
