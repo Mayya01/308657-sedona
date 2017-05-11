@@ -16,17 +16,6 @@ body {
     background-color: rgb(242, 242, 242);
     margin-top: 0;
 }
-h1,
-h2 {
-    font-size: 21px;
-    font-weight: bold;
-    line-height: 26px;
-}
-h3 {
-    font-size: 14px;
-    font-weight: normal;
-    line-height: 26px;
-}
 .container {
     width: 1200px;
     margin: 0 auto;
@@ -95,7 +84,7 @@ h3 {
 }
 .main-logo {
     background: url(../img/bc.png), 
-    rgb(120, 177, 207) url(../img/background%20photo.jpg);
+    rgb(120, 177, 207) url(../img/backgroundphoto.jpg);
     text-align: center;
     background-repeat: no-repeat;
     background-position: 0 bottom, 50% -55px;
@@ -117,10 +106,17 @@ h3 {
     margin-top: 0;
     padding: 60px 300px 13px 300px;
     line-height: 26px;
+    font-size: 21px;
+    line-height: 26px;
+    font-family: 'PT Sans', 'Arial', sans-serif;
 }
 .main-description h3 {
     text-align: center;
     margin-bottom: 0;
+    font-size: 14px;
+    line-height: 26px;
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-weight: normal;
 }
 .advertising {
     display: -webkit-box;
@@ -230,7 +226,7 @@ h3 {
     content: '';
     width: 68px;
     height: 77px;
-    background-position: -7px -771px;
+    background-position: -10px -738px;
     position: absolute;
     top: 60px;
     right: 170px;
@@ -277,13 +273,6 @@ h3 {
     line-height: 24px;
 }
 .best-offer-hotels {
-    width: 567px;
-    min-height: 86px;
-    background-color: rgb(118, 99, 87);
-    margin-left: 316px;
-    margin-right: 316px;
-}
-.best-offer-hotels a {
     color: #ffffff;
     text-decoration: none;
     text-align: center;
@@ -291,6 +280,11 @@ h3 {
     padding-top: 31px;
     font-weight: bold;
     font-size: 21px;
+    width: 567px;
+    min-height: 86px;
+    background-color: rgb(118, 99, 87);
+    margin-left: 316px;
+    margin-right: 316px;
 }
 .hotels-form {
     width: 568px;
@@ -344,6 +338,8 @@ h3 {
 .date-checkin {
     display: block;
     position: absolute;
+    font-size: 0;
+    text-decoration: none;
     background-image: url(../img/sprite2.png);
     background-repeat: no-repeat;
     width: 21px;
@@ -423,6 +419,8 @@ label[for='for-children'] {
     width: 12px;
     height: 3px;
     background-position: 0 -560px;
+    font-size: 0;
+    text-decoration: none;
 }
 .minus:hover {
     background-position: 0 -583px;
@@ -433,13 +431,15 @@ label[for='for-children'] {
 .plus {
     top: 0;
     right: 0;
-    background-position: 0 -663px;
+    background-position: 0px -664px;
+    font-size: 0;
+    text-decoration: none;
 }
 .plus:hover {
-    background-position: 0 -632px;
+    background-position: 0px -633px;
 }
 .plus:active {
-    background-position: 0 -725px;
+    background-position: 0px -695px;
 }
 /*для catalog.html, стили для чекбоксов, ползунка*/
 
@@ -502,15 +502,23 @@ input[type='checkbox'] + label::before {
     top: 0;
     left: 0;
     background-image: url(../img/sprite2.png);
-    background-position: -10px -865px;
+    background-position: -10px -834px;
 }
-input[type='checkbox']:checked + label::before {
-    background-position: -10px -187px;
+input[type='checkbox']:disabled + label::before {
+    background-position: -10px -960px;
 }
+input[type='checkbox']:checked + label::before{
+    background-position: -10px -876px;
+}
+input[type='checkbox']:disabled:checked + label::before{
+    background-position: -10px -918px;
+}
+
 .filter-range input[value],
 .filter-range input[value] {
-    padding-left: 2px;
-    line-height: 16px;
+    line-height: 21px;
+    font-family: 'PT Sans', 'Arial', sans-serif;
+    font-size: 14px;
 }
 /*Блок с сортировкой*/
 
@@ -526,6 +534,9 @@ input[type='checkbox']:checked + label::before {
     margin-top: 0;
     padding: 27px 49px 33px 72px;
     margin-bottom: 0;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
 }
 .sort p {
     margin-top: 0;
@@ -570,31 +581,35 @@ input[type='checkbox']:checked + label::before {
 .notactive-guide {
     width: 11px;
     height: 10px;
-    background-position: -10px -984px;
+    background-position: -10px -1037px;
     position: absolute;
     top: 40px;
     right: 96px;
+    font-size: 0;
+    text-decoration: none;
 }
 .active-guide {
     position: absolute;
     top: 39px;
     right: 73px;
+    font-size: 0;
+    text-decoration: none;
 }
 .notactive-guide:hover {
     width: 11px;
     height: 10px;
-    background-position: -10px -1014px;
+    background-position: -10px -1067px;
 }
 .notactive-guide:active {
     width: 11px;
     height: 10px;
-    background-position: -10px -1074px;
+    background-position: -10px -1097px;
 }
 .active-guide,
 .active-guide:active {
     width: 11px;
     height: 10px;
-    background-position: -10px -1164px;
+    background-position: -10px -1187px;
 }
 /*Стили для ползунка, демо*/
 
@@ -622,7 +637,6 @@ input[type='checkbox']:checked + label::before {
     font-size: 0;
     border: 2px solid #ffffff;
     border-radius: 2px;
-    line-height: 16px;
 }
 .price-controls::after {
     content: "";
@@ -638,16 +652,21 @@ input[type='checkbox']:checked + label::before {
 .price-controls label {
     display: inline-block;
     font-size: 14px;
-    line-height: 38px;
+    line-height: 21px;
     vertical-align: top;
     cursor: pointer;
     margin-top: -3px;
+    font-family: 'PT Sans', 'Arial', sans-serif;
 }
-.price-controls .min-price,
+.price-controls .min-price{
+    padding-left: 65px;
+    margin-top: 7px;
+    width: 90px;
+}
 .price-controls .max-price {
     width: 90px;
-    padding-left: 62px;
-    margin-top: -4px;
+    padding-left: 57px;
+    margin-top: 7px;
 }
 .price-controls input {
     width: 50px;
@@ -700,9 +719,8 @@ input[type='checkbox']:checked + label::before {
     border: 2px solid #ffffff;
     border-radius: 2px;
     cursor: pointer;
-    margin-left: 85px;
-    min-width: 120px;
-    min-height: 31px;
+    margin-left: 88px;
+    padding: 6px 30px 6px 30px;
 }
 .btn-transparent:hover {
     color: #000000;
@@ -735,6 +753,9 @@ input[type='checkbox']:checked + label::before {
     padding-top: 24px;
     min-height: 32px;
     cursor: pointer;
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: bold;
 }
 .items h2:hover {
     color: rgb(129, 179, 210);
@@ -841,6 +862,8 @@ input[type='checkbox']:checked + label::before {
     width: 89px;
     height: 17px;
     margin-bottom: 47px;
+    font-size: 0;
+    text-decoration: none;
 }
 .quail-information .raitning-image {
     width: 65px;
@@ -908,6 +931,8 @@ input[type='checkbox']:checked + label::before {
     background-position: -10px -10px;
     margin-left: 8px;
     margin-top: 40px;
+    font-size: 0;
+    text-decoration: none;
 }
 .copyright-logo:hover {
     width: 113px;
@@ -925,6 +950,7 @@ input[type='checkbox']:checked + label::before {
     width: 46px;
     height: 48px;
     font-size: 0;
+    text-decoration: none;
     background-color: rgb(129, 179, 210);
     position: relative;
 }
@@ -954,7 +980,7 @@ input[type='checkbox']:checked + label::before {
 .social-btn-tv::before {
     width: 17px;
     height: 15px;
-    background-position: -10px -949px;
+    background-position: -10px -1002px;
 }
 .social-btn-tv:active::before,
 .social-btn-fb:active::before,
@@ -969,7 +995,7 @@ input[type='checkbox']:checked + label::before {
 .social-btn-you::before {
     width: 20px;
     height: 16px;
-    background-position: -10px -1194px;
+    background-position: -10px -1217px;
 }
 /*Появление формы*/
 
