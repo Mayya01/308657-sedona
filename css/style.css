@@ -94,7 +94,8 @@ h3 {
     color: rgb(178, 178, 178);
 }
 .main-logo {
-    background-image: url(../img/bc.png), url(../img/background%20photo.jpg);
+    background: url(../img/bc.png), 
+    rgb(120, 177, 207) url(../img/background%20photo.jpg);
     text-align: center;
     background-repeat: no-repeat;
     background-position: 0 bottom, 50% -55px;
@@ -134,11 +135,11 @@ h3 {
 }
 .items-second:nth-child(1) {
     width: 800px;
-    background-image: url(../img/backgroundimage2.jpg);
+    background: rgb(221, 165, 137) url(../img/backgroundimage2.jpg);
     background-position: 0px -77px;
 }
 .items-first:nth-child(2) {
-    background-image: url(../img/backgroundimage1.jpg);
+    background: rgb(168, 181, 163) url(../img/backgroundimage1.jpg);
     width: 800px;
     background-position: 0 -80px;
 }
@@ -154,24 +155,30 @@ h3 {
     text-align: center;
     font-size: 14px;
 }
-.advertising-content p:first-child {
+.advertising-content .advertising-first-paragraph {
     font-size: 21px;
     padding-left: 70px;
     padding-right: 70px;
     font-weight: bold;
+} 
+.advertising-content .advertising-paragraph {
+    padding-left: 80px;
+    padding-right: 80px;
+    font-weight: bold;
+    font-size: 21px;
 }
 .advertising-content p:nth-child(2) {
     padding-left: 3px;
     padding-top: 2px;
 }
-.advertising-paragraph {
+.advertising-third-paragraph{
     padding: 8px;
 }
 .third .advertising-content {
     color: #000000;
     background-color: rgb(238, 238, 238);
 }
-.third .advertising-paragraph {
+.third .advertising-third-paragraph {
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -221,22 +228,19 @@ h3 {
 }
 .features-presents::after {
     content: '';
-    width: 64px;
-    height: 76px;
+    width: 68px;
+    height: 77px;
     background-position: -7px -771px;
     position: absolute;
     top: 60px;
     right: 170px;
 }
 .samewrap {
-    padding: 5px 50px 69px 50px;;
+    padding: 5px 50px 69px 50px;
+    ;
 }
 /*Стили к index.html:форма, блок поверх формы, карта*/
 
-/*.map {
-    /*background-image: url(../img/map.jpg);
-    display: none;
-}*/
 .best-offer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -356,7 +360,7 @@ h3 {
 .date-checkin:active {
     background-position: -10px -534px;
 }
-button[name = 'results'] {
+button[name ='results'] {
     background-color: rgb(129, 179, 210);
     width: 458px;
     height: 58px;
@@ -410,7 +414,7 @@ button[name = 'results']:active {
     line-height: 26px;
     font-family: 'PT Sans', 'Arial', sans-serif;
 }
-label[for ='for-children'] {
+label[for='for-children'] {
     padding-left: 51px;
 }
 .minus {
@@ -444,7 +448,7 @@ label[for ='for-children'] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    background-image: url(../img/filterbackground.jpg);
+    background: rgb(122, 156, 189) url(../img/filterbackground.jpg);
     color: #ffffff;
     min-height: 217px;
 }
@@ -468,7 +472,8 @@ label[for ='for-children'] {
 .options-accomodation label {
     padding-left: 45px;
 }
-.options-accomodation label, .options-features label{
+.options-accomodation label,
+.options-features label {
     cursor: pointer;
 }
 .options-accomodation label,
@@ -752,6 +757,7 @@ input[type='checkbox']:checked + label::before {
 }
 .hotels p {
     display: inline-block;
+    vertical-align: middle;
     margin-top: 0;
     padding-top: 8px;
 }
@@ -849,7 +855,7 @@ input[type='checkbox']:checked + label::before {
     display: -ms-flexbox;
     display: flex;
     min-height: 121px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     position: relative;
     margin-top: -121px;
 }
@@ -873,7 +879,7 @@ input[type='checkbox']:checked + label::before {
 }
 .footer-hastag,
 .footer-social,
-.footer-copyright{
+.footer-copyright {
     width: 400px;
 }
 .footer-social {
@@ -881,12 +887,17 @@ input[type='checkbox']:checked + label::before {
     padding-top: 35px;
     padding-right: 37px;
 }
+.footer-copyright{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
 .copyright-sign {
     display: block;
     text-decoration: none;
-    position: absolute;
-    top: 50px;
-    right: 223px;
+    min-height: 15px;
+    margin-top: 48px;
+    margin-left: 104px;
     color: #000000;
 }
 .copyright-logo {
@@ -895,9 +906,8 @@ input[type='checkbox']:checked + label::before {
     width: 113px;
     height: 39px;
     background-position: -10px -10px;
-    position: absolute;
-    top: 41px;
-    right: 103px;
+    margin-left: 8px;
+    margin-top: 40px;
 }
 .copyright-logo:hover {
     width: 113px;
@@ -918,7 +928,7 @@ input[type='checkbox']:checked + label::before {
     background-color: rgb(129, 179, 210);
     position: relative;
 }
-.social-btn:hover{
+.social-btn:hover {
     background-color: rgb(102, 158, 192);
 }
 .social-btn:active {
@@ -961,16 +971,18 @@ input[type='checkbox']:checked + label::before {
     height: 16px;
     background-position: -10px -1194px;
 }
-
 /*Появление формы*/
+
+.frameborder {
+    border: 0;
+}
 .map {
-    background-image: url(../img/map.jpg);
+    background: rgb(203, 221, 169) url(../img/map.jpg);
 }
 .visible {
-  display: block;
-  -webkit-animation: appearance 1s;
-          animation: appearance 1s;
-
+    display: block;
+    -webkit-animation: appearance 1s;
+    animation: appearance 1s;
 }
 @-webkit-keyframes appearance {
     0% {
@@ -988,65 +1000,51 @@ input[type='checkbox']:checked + label::before {
         opacity: 1;
     }
 }
-
 .error {
-  -webkit-animation-name: shake;
-          animation-name: shake;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+    -webkit-animation-name: shake;
+    animation-name: shake;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
 }
-
 @-webkit-keyframes shake {
-  0%, 100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    -webkit-transform: translateX(-5px);
-            transform: translateX(-5px);
-  }
-  20%, 40%, 60%, 80% {
-    -webkit-transform: translateX(5px);
-            transform: translateX(5px);
-  }
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
 }
-
 @keyframes shake {
-  0%, 100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    -webkit-transform: translateX(-5px);
-            transform: translateX(-5px);
-  }
-  20%, 40%, 60%, 80% {
-    -webkit-transform: translateX(5px);
-            transform: translateX(5px);
-  }
+    0%, 100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

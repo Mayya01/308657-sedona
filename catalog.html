@@ -1,213 +1,229 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title> Седона</title>
+     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-   <div class = 'container'>
+    <link href="css/style.min.css" rel="stylesheet">
+</head>
 
-    <header class = 'main-header'>
-        <nav class = 'main-navigation'>
-          <ul class = 'navigation'>
+<body>
+    <div class='container'>
 
-            <li class = 'navigation-left'><a href = '#' class = 'notactive-navigation'>Информация</a></li>
-            <li class = 'navigation-left'><a href = '#' class = 'notactive-navigation' >Фото и видео</a></li>
-            <li class = 'navigation-right'><a href = '#' class = 'notactive-navigation'>Карта штата</a></li>
-            <li class = 'navigation-right'><a href = '#' class = 'active-navigation'>Гостиницы</a></li>
+        <header class='main-header'>
+            <nav class='main-navigation'>
+                <ul class='navigation'>
 
-          </ul>
-        </nav>
-      <a href = 'index.html'><img src= 'img/logo.png' alt = 'Логотип'></a>
-    </header>
-    <main>
+                    <li class='navigation-left'><a href='#' class='notactive-navigation'>Информация</a>
+                    </li>
+                    <li class='navigation-left'><a href='#' class='notactive-navigation'>Фото и видео</a>
+                    </li>
+                    <li class='navigation-right'><a href='#' class='notactive-navigation'>Карта штата</a>
+                    </li>
+                    <li class='navigation-right'><a href='#' class='active-navigation'>Гостиницы</a>
+                    </li>
 
-      <form class = 'options' action='https://echo.htmlacademy.ru' method='get'>
+                </ul>
+            </nav>
+            <a href='index.html'><img src='img/logo.png' alt='Логотип' width='138' height='70'>
+            </a>
+        </header>
+        <main>
 
-       <div class = 'options-features'>
+            <form class='options' action='https://echo.htmlacademy.ru' method='get'>
 
-          <p>Инфраструктура:</p>
+                <div class='options-features'>
 
-        <div class = 'options-checkbox'>
+                    <p>Инфраструктура:</p>
 
-          <input type="checkbox" name = 'pool' id = 'swimming-pool' checked>
-          <label for = 'swimming-pool'>Бассейн</label>
+                    <div class='options-checkbox'>
 
-          <input type="checkbox" name = 'parking' id = 'parking-area'>
-          <label for = 'parking-area'>Парковка</label>
+                        <input type="checkbox" name='pool' id='swimming-pool' checked>
+                        <label for='swimming-pool'>Бассейн</label>
 
-          <input type="checkbox" name = 'wf' id = 'wi-fi'>
-          <label for = 'wi-fi'>Wi-fi</label>
+                        <input type="checkbox" name='parking' id='parking-area'>
+                        <label for='parking-area'>Парковка</label>
 
-         </div>
+                        <input type="checkbox" name='wf' id='wi-fi'>
+                        <label for='wi-fi'>Wi-fi</label>
 
-      </div>
+                    </div>
 
-       <div class = 'options-accomodation'>
-         
-          <p class = 'options-type'>Тип Жилья:</p>
+                </div>
 
-        <div class = 'options-checkbox'>
+                <div class='options-accomodation'>
 
-          <input type="checkbox" name = 'hotels' id = 'hotels' checked>
-          <label for = 'hotels'>Гостиница</label>
+                    <p class='options-type'>Тип Жилья:</p>
 
-          <input type="checkbox" name = 'motel' id = 'motel' checked>
-          <label for = 'motel'>Мотель</label>
+                    <div class='options-checkbox'>
 
-          <input type="checkbox" name = 'apartments' id = 'apartments' checked>
-          <label for = 'apartments'>Апартаменты</label>
+                        <input type="checkbox" name='hotels' id='hotels' checked>
+                        <label for='hotels'>Гостиница</label>
 
-         </div>
+                        <input type="checkbox" name='motel' id='motel' checked>
+                        <label for='motel'>Мотель</label>
+
+                        <input type="checkbox" name='apartments' id='apartments' checked>
+                        <label for='apartments'>Апартаменты</label>
+
+                    </div>
 
 
 
-        </div>
-        <div class="filter-range">
+                </div>
+                <div class="filter-range">
 
-          <div class="filter-range-title">Стоимость в сутки (р):</div>
-          <div class="price-controls">
-            <label class="min-price">от <input type="text" name="min-price" value="0"></label>
-            <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
-          </div>
-          <div class="range-controls">
-            <div class="scale">
-            <div class="bar"></div>
+                    <div class="filter-range-title">Стоимость в сутки (р):</div>
+                    <div class="price-controls">
+                        <label class="min-price">от
+                            <input type="text" name="min-price" value="0">
+                        </label>
+                        <label class="max-price">до
+                            <input type="text" name="max-price" value="3000">
+                        </label>
+                    </div>
+                    <div class="range-controls">
+                        <div class="scale">
+                            <div class="bar"></div>
+                        </div>
+
+                        <div class="range-toggle range-toggle-min"></div>
+                        <div class="range-toggle range-toggle-max"></div>
+                    </div>
+
+                    <button class="btn-transparent" type="submit">Показать</button>
+
+                </div>
+            </form>
+
+            <section class='sort'>
+
+                <h2>Найдено: 3</h2>
+                <p>Сортировка:</p>
+                <ul>
+                    <li><a href='#' class='sorting active'>По цене</a>
+                    </li>
+                    <li><a href='#' class='sorting'>По типу</a>
+                    </li>
+                    <li><a href='#' class='sorting'>По рейтингу</a>
+                    </li>
+                </ul>
+                <div>
+                    <a href='#' class='sort-guide notactive-guide'></a>
+                    <a href='#' class='sort-guide active-guide'></a>
+                </div>
+
+
+            </section>
+
+            <div class='items'>
+
+                <article class='items-amara'>
+
+                    <div class='amara-image'>
+                        <img src='img/amararesort.jpg' alt='amara resort' width='136' height='90'>
+                    </div>
+
+                    <div class='amara-description'>
+                        <h2>Amara Resort & Spa</h2>
+                        <div class='hotels amara'>
+                            <p>Гостиница</p>
+                            <p>от 4000 р.</p>
+                        </div>
+                        <div class=' hotels amara'>
+                            <a href='#' class='amara-details'>Подробнее</a>
+                            <a href='#' class='amara-book'>Забронировать</a>
+                        </div>
+                    </div>
+
+                    <div class='amara-information'>
+                        <div class='raitning-image'></div>
+                        <div class='amara-rating'>Рейтинг: 8,5</div>
+                    </div>
+
+                </article>
+
+                <article class='items-quail'>
+
+                    <div class='quail-image'>
+                        <img src='img/quail.jpg' alt='Desert Quail Inn' width='136' height='90'>
+                    </div>
+
+                    <div class='quail-description'>
+                        <h2>Desert Quail Inn</h2>
+                        <div class=' hotels quail'>
+                            <p>Мотель</p>
+                            <p>от 3000 р.</p>
+                        </div>
+                        <div class=' hotels quail'>
+                            <a href='#' class='quail-details'>Подробнее</a>
+                            <a href='#' class='quail-book'>Забронировать</a>
+                        </div>
+                    </div>
+
+                    <div class='quail-information'>
+                        <div class='raitning-image'></div>
+                        <div class='quail-raitnig'> Рейтинг: 8,9</div>
+
+                    </div>
+
+                </article>
+
+                <article class='items-poco'>
+
+                    <div class='poco-image'>
+                        <img src='img/pocodiablo.jpg' alt='Villas At Poco Diablo' width='136' height='90'>
+                    </div>
+
+                    <div class='poco-description'>
+                        <h2>Villas At Poco Diablo</h2>
+                        <div class=' hotels poco'>
+                            <p>Апартаменты</p>
+                            <p>от 2000 р.</p>
+                        </div>
+                        <div class=' hotels poco'>
+                            <a href='#' class='poco-details'>Подробнее</a>
+                            <a href='#' class='poco-book'>Забронировать</a>
+                        </div>
+                    </div>
+                    <div class='poco-information'>
+                        <div class='raitning-image'></div>
+                        <div class='poco-raitnig'>Рейтинг: 9,2</div>
+                    </div>
+
+                </article>
             </div>
 
-            <div class="range-toggle range-toggle-min"></div>
-            <div class="range-toggle range-toggle-max"></div>
-      </div>
+        </main>
+        <footer class='main-footer noopacity'>
 
-      <button class="btn-transparent" type="submit">Показать</button>
 
+            <section class='footer-hastag'>
+                <a href='#'>#VISITSEDONA</a>
+            </section>
+
+            <section class='footer-social'>
+
+                <a class=' social-btn social-btn-tv' href='#'></a>
+                <a class='social-btn social-btn-fb' href='#'></a>
+                <a class='social-btn social-btn-you' href='#'></a>
+
+
+            </section>
+
+            <section class='footer-copyright'>
+
+                <a href='#' class='copyright-sign'>WEBSITE BY</a>
+                <a href='https://htmlacademy.ru/intensive/htmlcss' class='copyright-logo'></a>
+
+            </section>
+
+        </footer>
     </div>
-      </form>
+</body>
 
-      <section class = 'sort'>
-
-          <h2>Найдено: 3</h2>
-            <p>Сортировка:</p>
-            <ul>
-                <li><a  href = '#' class = 'sorting active'>По цене</a></li>
-                <li><a  href = '#' class = 'sorting'>По типу</a></li>
-                <li><a  href = '#' class = 'sorting'>По рейтингу</a></li>
-            </ul>
-      <div>
-        <a href = '#' class = 'sort-guide notactive-guide'></a>
-        <a href = '#' class = 'sort-guide active-guide'></a>
-      </div>
-
-
-      </section>
-
-      <div class = 'items'>
-
-        <article class = 'items-amara'>
-
-          <div class = 'amara-image'>
-             <img src = 'img/amararesort.jpg' alt = 'amara resort' width='136' height='90'>
-          </div>
-
-          <div class = 'amara-description'>
-              <h2>Amara Resort & Spa</h2>
-            <div class = 'hotels amara'>
-              <p>Гостиница</p>
-              <p>от 4000 р.</p>
-            </div>
-            <div class = ' hotels amara'>
-              <a href = '#' class = 'amara-details'>Подробнее</a>
-              <a href = '#' class = 'amara-book'>Забронировать</a>
-            </div>
-          </div>
-
-          <div class = 'amara-information'>
-            <div class = 'raitning-image'></div>
-              <div class = 'amara-rating'>Рейтинг: 8,5</div>
-          </div>
-
-        </article>
-
-        <article class = 'items-quail'>
-
-          <div class = 'quail-image'>
-             <img src= 'img/quail.jpg' alt = 'Desert Quail Inn' width='136' height='90'>
-          </div>
-
-          <div class = 'quail-description'>
-              <h2>Desert Quail Inn</h2>
-            <div class = ' hotels quail'>
-              <p>Мотель</p>
-              <p>от 3000 р.</p>
-            </div>
-            <div class = ' hotels quail' >
-              <a href = '#' class = 'quail-details'>Подробнее</a>
-              <a href = '#' class = 'quail-book'>Забронировать</a>
-            </div>
-          </div>
-
-          <div class = 'quail-information'>
-             <div class = 'raitning-image'></div>
-              <div class = 'quail-raitnig'> Рейтинг: 8,9</div>
-
-          </div>
-
-         </article>
-
-         <article class = 'items-poco'>
-
-          <div class = 'poco-image'>
-             <img src= 'img/pocodiablo.jpg' alt = 'Villas At Poco Diablo' width='136' height='90'>
-           </div>
-
-            <div class = 'poco-description'>
-              <h2>Villas At Poco Diablo</h2>
-            <div class = ' hotels poco'>
-              <p>Апартаменты</p>
-              <p>от 2000 р.</p>
-            </div>
-            <div class = ' hotels poco'>
-              <a href = '#' class = 'poco-details'>Подробнее</a>
-              <a href = '#' class = 'poco-book'>Забронировать</a>
-            </div>
-            </div>
-            <div class = 'poco-information'>
-             <div class = 'raitning-image'></div>
-              <div class = 'poco-raitnig'>Рейтинг: 9,2</div>
-           </div>
-
-         </article>
-      </div>
-
-</main>
-    <footer class = 'main-footer noopacity' >
-
-
-        <section class = 'footer-hastag'>
-          <a href = '#'>#VISITSEDONA</a>
-        </section>
-
-        <section class = 'footer-social'>
-
-            <a class=' social-btn social-btn-tv'  href= '#' ></a>
-            <a class= 'social-btn social-btn-fb'  href= '#'></a>
-            <a class= 'social-btn social-btn-you' href='#'></a>
-
-
-        </section>
-
-        <section class = 'footer-copyright'>
-
-          <a href = '#' class = 'copyright-sign'>WEBSITE BY</a>
-          <a href = '#' class = 'copyright-logo'></a>
-
-        </section>
-
-      </footer>
-    </div>
-  </body>
 </html>
 
 
