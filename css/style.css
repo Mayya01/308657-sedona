@@ -83,7 +83,7 @@ body {
     color: rgb(178, 178, 178);
 }
 .main-logo {
-    background: url(../img/bc.png), 
+    background: url(../img/bc.png),
     rgb(120, 177, 207) url(../img/backgroundphoto.jpg);
     text-align: center;
     background-repeat: no-repeat;
@@ -156,7 +156,7 @@ body {
     padding-left: 70px;
     padding-right: 70px;
     font-weight: bold;
-} 
+}
 .advertising-content .advertising-paragraph {
     padding-left: 80px;
     padding-right: 80px;
@@ -264,9 +264,9 @@ body {
     width: 634px;
     margin-left: 282px;
     margin-right: 282px;
-    margin-top: 57px;
+    margin-top: 58px;
     min-height: 135px;
-    padding-bottom: 37px;
+    padding-bottom: 36px;
 }
 .best-offer-options p {
     text-align: center;
